@@ -502,6 +502,244 @@ class DataProcessor:
         
         self.logger.info("数据验证通过")
         return True
+    
+    def read_file(self, file_path: str) -> pd.DataFrame:
+        """读取Excel或CSV文件"""
+        file_ext = Path(file_path).suffix.lower()
+        self.logger.info(f"读取文件: {file_path}, 扩展名: {file_ext}")
+        
+        if file_ext == '.csv':
+            df = pd.read_csv(file_path, encoding='utf-8-sig')
+        elif file_ext in ['.xlsx', '.xls']:
+            df = pd.read_excel(file_path)
+        else:
+            raise ValueError(f"不支持的文件格式: {file_ext}")
+        
+        self.logger.info(f"成功读取文件，共 {len(df)} 行，列: {list(df.columns)}")
+        return df
+    
+    def save_file(self, df: pd.DataFrame, output_path: str):
+        """保存DataFrame到文件"""
+        file_ext = Path(output_path).suffix.lower()
+        self.logger.info(f"保存文件到: {output_path}, 格式: {file_ext}")
+        
+        if file_ext == '.csv':
+            df.to_csv(output_path, index=False, encoding='utf-8-sig')
+        elif file_ext in ['.xlsx', '.xls']:
+            df.to_excel(output_path, index=False, engine='openpyxl')
+        else:
+            raise ValueError(f"不支持的输出文件格式: {file_ext}")
+        
+        self.logger.info(f"文件已保存: {output_path}")
+    
+    def merge_warning_count_to_withdraw_records(
+        self, 
+        warning_file_path: str, 
+        withdraw_file_path: str, 
+        output_path: str = None
+    ) -> pd.DataFrame:
+        """
+        将预警查询列表中的预警次数合并到取现记录中
+        
+        参数:
+            warning_file_path: 预警查询列表导出文件路径
+            withdraw_file_path: 取现记录导出文件路径  
+            output_path: 输出文件路径（如果为None则不保存文件）
+        
+        返回:
+            合并后的DataFrame
+        """
+        try:
+            # 读取预警查询列表文件
+            self.logger.info(f"读取预警查询列表文件: {warning_file_path}")
+            warning_df = self.read_file(warning_file_path)
+            
+            # 读取取现记录文件
+            self.logger.info(f"读取取现记录文件: {withdraw_file_path}")
+            withdraw_df = self.read_file(withdraw_file_path)
+            
+            # 在预警文件中查找"受害人身份证号"和"受害人号码"列
+            victim_id_col = self.find_column_by_keywords(warning_df, ['受害人身份证号', '身份证号'])
+            victim_phone_col = self.find_column_by_keywords(warning_df, ['受害人号码', '号码'])
+            
+            if not victim_id_col and not victim_phone_col:
+                self.logger.error(f"无法找到预警文件中的'受害人身份证号'或'受害人号码'列，可用列: {list(warning_df.columns)}")
+                raise ValueError("无法找到预警文件中的'受害人身份证号'或'受害人号码'列")
+            
+            # 在取现记录文件中查找"身份证号"和"电话号码"列
+            withdraw_id_col = self.find_column_by_keywords(withdraw_df, ['身份证号'])
+            withdraw_phone_col = self.find_column_by_keywords(withdraw_df, ['电话号码', '手机号', '电话', '联系方式'])
+            
+            if not withdraw_id_col and not withdraw_phone_col:
+                self.logger.error(f"无法找到取现记录文件中的'身份证号'或'电话号码'列，可用列: {list(withdraw_df.columns)}")
+                raise ValueError("无法找到取现记录文件中的'身份证号'或'电话号码'列")
+            
+            self.logger.info(f"预警文件列 - 身份证号: {victim_id_col}, 号码: {victim_phone_col}")
+            self.logger.info(f"取现记录列 - 身份证号: {withdraw_id_col}, 电话号码: {withdraw_phone_col}")
+            
+            # 初始化合并结果
+            merged_df = withdraw_df.copy()
+            merged_df['预警次数'] = 0
+            
+            # 查找"疑似诈骗类型"列
+            fraud_type_col = self.find_column_by_keywords(warning_df, ['疑似诈骗类型', '诈骗类型', '类型'])
+            
+            if fraud_type_col:
+                self.logger.info(f"找到疑似诈骗类型列: {fraud_type_col}")
+                merged_df['疑似诈骗类型'] = ''
+            else:
+                self.logger.warning("未找到'疑似诈骗类型'列")
+                fraud_type_col = None
+                merged_df['疑似诈骗类型'] = ''
+            
+            id_matched_count = 0
+            
+            # 第一步：按身份证号匹配
+            if victim_id_col and withdraw_id_col:
+                self.logger.info("开始使用身份证号进行匹配...")
+                
+                # 统计每个身份证号的预警次数，同时收集疑似诈骗类型
+                id_warning_info = {}
+                
+                for idx, row in warning_df.iterrows():
+                    victim_id = str(row[victim_id_col]).strip() if pd.notna(row[victim_id_col]) else ''
+                    if victim_id and victim_id != '' and victim_id != 'nan':
+                        if victim_id not in id_warning_info:
+                            id_warning_info[victim_id] = {
+                                'count': 0,
+                                'types': []
+                            }
+                        id_warning_info[victim_id]['count'] += 1
+                        
+                        # 收集疑似诈骗类型（保留所有原始值）
+                        if fraud_type_col and pd.notna(row[fraud_type_col]):
+                            fraud_type = str(row[fraud_type_col]).strip()
+                            if fraud_type and fraud_type != '' and fraud_type != 'nan':
+                                id_warning_info[victim_id]['types'].append(fraud_type)
+                
+                # 转换为DataFrame
+                id_warning_data = []
+                for victim_id, info in id_warning_info.items():
+                    # 不去重，保留所有原始值
+                    fraud_types = ', '.join(info['types']) if info['types'] else ''
+                    id_warning_data.append({
+                        '身份证号': victim_id,
+                        '预警次数': info['count'],
+                        '疑似诈骗类型': fraud_types
+                    })
+                
+                id_counts_df = pd.DataFrame(id_warning_data)
+                
+                self.logger.info(f"统计到 {len(id_counts_df)} 个不重复的身份证号")
+                
+                # 标准化取现记录中的身份证号
+                withdraw_df['身份证号_clean'] = withdraw_df[withdraw_id_col].astype(str).str.strip()
+                
+                # 匹配身份证号
+                id_matched = withdraw_df.merge(
+                    id_counts_df,
+                    left_on='身份证号_clean',
+                    right_on='身份证号',
+                    how='left'
+                )
+                
+                # 填充匹配结果
+                merged_df['预警次数'] = id_matched['预警次数'].fillna(0).astype(int)
+                merged_df['疑似诈骗类型'] = id_matched.get('疑似诈骗类型', pd.Series([''] * len(merged_df))).fillna('')
+                
+                # 记录匹配结果
+                id_matched_count = int((merged_df['预警次数'] > 0).sum())
+                self.logger.info(f"身份证号匹配成功: {id_matched_count} 条记录")
+            
+            # 第二步：对未匹配的记录，使用手机号匹配
+            if victim_phone_col and withdraw_phone_col:
+                self.logger.info("开始使用手机号进行匹配...")
+                # 找出未匹配的记录（预警次数为0的记录）
+                unmatched_df = merged_df[merged_df['预警次数'] == 0].copy()
+                
+                if len(unmatched_df) > 0:
+                    self.logger.info(f"待匹配记录数: {len(unmatched_df)}")
+                    
+                    # 统计每个手机号的预警次数，同时收集疑似诈骗类型
+                    phone_warning_info = {}
+                    
+                    for idx, row in warning_df.iterrows():
+                        victim_phone = str(row[victim_phone_col]).strip() if pd.notna(row[victim_phone_col]) else ''
+                        if victim_phone and victim_phone != '' and victim_phone != 'nan':
+                            # 只统计数字开头的电话号码
+                            if victim_phone and victim_phone[0].isdigit():
+                                if victim_phone not in phone_warning_info:
+                                    phone_warning_info[victim_phone] = {
+                                        'count': 0,
+                                        'types': []
+                                    }
+                                phone_warning_info[victim_phone]['count'] += 1
+                                
+                                # 收集疑似诈骗类型（保留所有原始值）
+                                if fraud_type_col and pd.notna(row[fraud_type_col]):
+                                    fraud_type = str(row[fraud_type_col]).strip()
+                                    if fraud_type and fraud_type != '' and fraud_type != 'nan':
+                                        phone_warning_info[victim_phone]['types'].append(fraud_type)
+                    
+                    self.logger.info(f"统计到 {len(phone_warning_info)} 个不重复的电话号码")
+                    
+                    # 更新未匹配记录的预警次数和疑似诈骗类型
+                    for orig_idx in unmatched_df.index:
+                        phone = str(unmatched_df.loc[orig_idx, withdraw_phone_col]).strip()
+                        if phone in phone_warning_info:
+                            info = phone_warning_info[phone]
+                            merged_df.loc[orig_idx, '预警次数'] = int(info['count'])
+                            if fraud_type_col:
+                                # 不去重，保留所有原始值
+                                fraud_types = ', '.join(info['types']) if info['types'] else ''
+                                merged_df.loc[orig_idx, '疑似诈骗类型'] = fraud_types
+                    
+                    # 记录匹配结果
+                    new_matched_count = int((merged_df['预警次数'] > 0).sum())
+                    phone_matched_count = new_matched_count - id_matched_count
+                    self.logger.info(f"手机号匹配成功: {phone_matched_count} 条记录")
+            
+            # 清理临时列
+            columns_to_drop = []
+            if '身份证号_clean' in merged_df.columns:
+                columns_to_drop.append('身份证号_clean')
+            if '身份证号_x' in merged_df.columns:
+                columns_to_drop.append('身份证号_x')
+            if '身份证号_y' in merged_df.columns:
+                columns_to_drop.append('身份证号_y')
+            if '电话号码_clean' in merged_df.columns:
+                columns_to_drop.append('电话号码_clean')
+            if '电话号码_x' in merged_df.columns:
+                columns_to_drop.append('电话号码_x')
+            if '电话号码_y' in merged_df.columns:
+                columns_to_drop.append('电话号码_y')
+            
+            if columns_to_drop:
+                merged_df = merged_df.drop(columns=columns_to_drop)
+            
+            self.logger.info(f"合并完成，共 {len(merged_df)} 条记录")
+            self.logger.info(f"其中 {len(merged_df[merged_df['预警次数'] > 0])} 条有预警记录")
+            
+            # 如果指定了输出路径，保存文件
+            if output_path:
+                self.save_file(merged_df, output_path)
+                self.logger.info(f"结果已保存到: {output_path}")
+            
+            # 返回统计信息
+            stats = {
+                'total_records': len(merged_df),
+                'with_warning': int((merged_df['预警次数'] > 0).sum()),
+                'without_warning': int((merged_df['预警次数'] == 0).sum()),
+                'max_warning_count': int(merged_df['预警次数'].max()) if len(merged_df) > 0 else 0,
+                'avg_warning_count': float(merged_df['预警次数'].mean()) if len(merged_df) > 0 else 0.0
+            }
+            self.logger.info(f"合并统计: {stats}")
+            
+            return merged_df
+            
+        except Exception as e:
+            self.logger.error(f"合并预警次数失败: {e}")
+            raise
 
 
 if __name__ == "__main__":

@@ -35,10 +35,17 @@ def create_app() -> Flask:
 
 	@app.route("/upload", methods=["POST"])
 	def upload():
-		file = request.files.get("file")
+		files = request.files.getlist("file")  # 获取所有上传的文件
 		datetime_str = request.form.get("datetime") or ""
 		amount_str = request.form.get("amount") or ""
 
+		# 检查是否有文件上传
+		if not files or not any(file.filename for file in files):
+			flash("请选择至少一个文件", "error")
+			return redirect(url_for("index"))
+
+		# 验证第一个文件（用于验证时间和金额）
+		file = files[0] if files else None
 		ok, msg = _validate_inputs(file, datetime_str, amount_str)
 		if not ok:
 			flash(msg, "error")
@@ -48,59 +55,69 @@ def create_app() -> Flask:
 		when = _parse_datetime(datetime_str)
 		amount = float(amount_str)
 
-		# Save file and perform scoring analysis
-		if file and hasattr(file, 'filename') and file.filename:
-			original_filename = file.filename
-			filename = secure_filename(original_filename)
-			
-			# 检查文件名是否有效
-			if not filename or filename == '':
-				flash("文件名无效，请重新上传", "error")
-				return redirect(url_for("index"))
-			
-			# 检查文件是否有扩展名
-			if '.' not in filename:
-				# 尝试从原始文件名中获取扩展名
-				if '.' in original_filename:
-					ext = original_filename.rsplit('.', 1)[1].lower()
-					if ext in ['csv', 'xlsx', 'xls']:
-						filename = f"{filename}.{ext}"
+		# 处理所有上传的文件
+		saved_files = []
+		for file in files:
+			if file and hasattr(file, 'filename') and file.filename:
+				original_filename = file.filename
+				filename = secure_filename(original_filename)
+				
+				# 检查文件名是否有效
+				if not filename or filename == '':
+					flash(f"文件名无效: {original_filename}，已跳过", "error")
+					continue
+				
+				# 检查文件是否有扩展名
+				if '.' not in filename:
+					# 尝试从原始文件名中获取扩展名
+					if '.' in original_filename:
+						ext = original_filename.rsplit('.', 1)[1].lower()
+						if ext in ['csv', 'xlsx', 'xls']:
+							filename = f"{filename}.{ext}"
+						else:
+							flash(f"不支持的文件格式: .{ext}，已跳过 {original_filename}", "error")
+							continue
 					else:
-						flash(f"不支持的文件格式: .{ext}，请上传 .csv, .xlsx 或 .xls 文件", "error")
-						return redirect(url_for("index"))
-				else:
-					flash("文件缺少扩展名，请确保文件是 .csv, .xlsx 或 .xls 格式", "error")
-					return redirect(url_for("index"))
-			
-			app.logger.info(f"原始文件名: {original_filename}, 处理后文件名: {filename}")
-			save_path = UPLOAD_DIR / filename
-			file.save(save_path)
-			
-			# 执行评分分析
-			if when:
-				try:
-					# 使用数据处理器处理上传文件
-					processed_data = data_processor.process_uploaded_data(str(save_path))
-					if processed_data and data_processor.validate_processed_data(processed_data):
-						# 执行评分分析
-						scoring_result = scoring_system.perform_analysis(when, amount, "", str(save_path), processed_data)
-						
-						# 保存评分结果
-						result_path = UPLOAD_DIR / f"{filename}_scoring_result.json"
-						scoring_system.export_analysis_result(scoring_result, str(result_path))
-				except Exception as e:
-					app.logger.warning(f"文件处理失败: {str(e)}，仅保存文件")
-		else:
-			filename = "unknown"
-			save_path = UPLOAD_DIR / filename
+						flash(f"文件缺少扩展名: {original_filename}，已跳过", "error")
+						continue
+				
+				app.logger.info(f"原始文件名: {original_filename}, 处理后文件名: {filename}")
+				save_path = UPLOAD_DIR / filename
+				file.save(save_path)
+				saved_files.append(filename)
+				
+				# 对每个文件执行评分分析
+				if when:
+					try:
+						# 使用数据处理器处理上传文件
+						processed_data = data_processor.process_uploaded_data(str(save_path))
+						if processed_data and data_processor.validate_processed_data(processed_data):
+							# 执行评分分析
+							scoring_result = scoring_system.perform_analysis(when, amount, "", str(save_path), processed_data)
+							
+							# 保存评分结果
+							result_path = UPLOAD_DIR / f"{filename}_scoring_result.json"
+							scoring_system.export_analysis_result(scoring_result, str(result_path))
+					except Exception as e:
+						app.logger.warning(f"文件处理失败: {str(e)}，仅保存文件")
 
 		# Log and flash message
-		if when:
-			app.logger.info("Received file=%s, when=%s, amount=%.2f saved_to=%s", filename, when.isoformat(), amount, save_path)
-			flash(f"已接收: 文件 {filename}，时间 {when.strftime('%Y-%m-%d %H:%M')}，金额 {amount:.2f}，已完成评分分析", "success")
+		if saved_files:
+			files_str = ", ".join(saved_files[:3])  # 只显示前3个文件名
+			if len(saved_files) > 3:
+				files_str += f" 等{len(saved_files)}个文件"
+			else:
+				files_str = files_str
+			
+			if when:
+				app.logger.info("Received %d files: %s, when=%s, amount=%.2f", len(saved_files), files_str, when.isoformat(), amount)
+				flash(f"已接收: {len(saved_files)} 个文件，时间 {when.strftime('%Y-%m-%d %H:%M')}，金额 {amount:.2f}，已完成评分分析", "success")
+			else:
+				app.logger.info("Received %d files: %s, amount=%.2f", len(saved_files), files_str, amount)
+				flash(f"已接收: {len(saved_files)} 个文件，金额 {amount:.2f}", "success")
 		else:
-			app.logger.info("Received file=%s, amount=%.2f saved_to=%s", filename, amount, save_path)
-			flash(f"已接收: 文件 {filename}，金额 {amount:.2f}", "success")
+			flash("没有成功上传任何文件", "error")
+		
 		return redirect(url_for("index"))
 
 	@app.route("/uploads/<path:filename>")

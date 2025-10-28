@@ -170,6 +170,42 @@
             flex-shrink: 0;
         }
         .file-remove:hover { background: #dc2626; }
+        
+        /* 多文件列表样式 */
+        .files-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .file-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .file-item:hover {
+            border-color: #666;
+        }
+        .file-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .file-item-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .file-item-size {
+            font-size: 11px;
+            color: #718096;
+        }
+        
         .amount-input, .datetime-display, .location-input { 
             width: 100%; 
             padding: 16px 20px; 
@@ -676,21 +712,14 @@
             <!-- 文件上传 -->
             <div class="form-col">
                 <div class="file-upload-area" id="fileUploadArea">
-                    <input id="file" name="file" type="file" accept=".csv,.xlsx,.xls" required style="display: none;" />
+                    <input id="file" name="file" type="file" accept=".csv,.xlsx,.xls" multiple required style="display: none;" />
                     <div class="file-upload-content" id="fileUploadContent">
                         <div class="file-upload-text">
                             <div class="primary-text">取现数据上传</div>
                         </div>
                     </div>
                     <div class="file-info" id="fileInfo" style="display: none;">
-                        <div class="file-preview">
-                            <span class="file-icon">📄</span>
-                            <div class="file-details">
-                                <div class="file-name" id="fileName"></div>
-                                <div class="file-size" id="fileSize"></div>
-                            </div>
-                            <button type="button" class="file-remove" id="fileRemove">✕</button>
-                        </div>
+                        <div class="files-list" id="filesList"></div>
                     </div>
                 </div>
             </div>
@@ -844,9 +873,7 @@
         const fileUploadArea = document.getElementById('fileUploadArea');
         const fileUploadContent = document.getElementById('fileUploadContent');
         const fileInfo = document.getElementById('fileInfo');
-        const fileName = document.getElementById('fileName');
-        const fileSize = document.getElementById('fileSize');
-        const fileRemove = document.getElementById('fileRemove');
+        const filesList = document.getElementById('filesList');
         
         const amountInput = document.getElementById('amount');
         const amountSuggestions = document.getElementById('amountSuggestions'); // 这个元素不存在
@@ -1053,36 +1080,89 @@
             }
         });
         
-        fileRemove.addEventListener('click', (e) => {
-            e.stopPropagation();
-            clearFileSelection();
-        });
-        
         function handleFileSelect() {
-            const file = fileInput.files[0];
-            if (file) {
+            const files = Array.from(fileInput.files);
+            if (files.length > 0) {
                 const allowedTypes = ['.csv', '.xlsx', '.xls'];
-                const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+                let hasInvalidFile = false;
+                let hasOversizedFile = false;
                 
-                if (!allowedTypes.includes(fileExtension)) {
+                // 验证所有文件
+                for (const file of files) {
+                    const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+                    
+                    if (!allowedTypes.includes(fileExtension)) {
+                        hasInvalidFile = true;
+                        break;
+                    }
+                    
+                    if (file.size > 32 * 1024 * 1024) {
+                        hasOversizedFile = true;
+                        break;
+                    }
+                }
+                
+                if (hasInvalidFile) {
                     showFloatingToast('不支持的文件格式！请选择 CSV 或 Excel 文件', 'error', 4000);
                     clearFileSelection();
                     return;
                 }
                 
-                if (file.size > 32 * 1024 * 1024) {
+                if (hasOversizedFile) {
                     showFloatingToast('文件大小超过限制！请选择小于 32MB 的文件', 'error', 4000);
                     clearFileSelection();
                     return;
                 }
                 
-                fileName.textContent = file.name;
-                fileSize.textContent = formatFileSize(file.size);
-                fileUploadContent.style.display = 'none';
-                fileInfo.style.display = 'block';
+                // 显示文件列表
+                displayFilesList(files);
                 
                 // 显示悬浮提示
-                showFloatingToast('文件上传成功 ✓', 'success', 2000);
+                showFloatingToast(`${files.length} 个文件已选择 ✓`, 'success', 2000);
+            }
+        }
+        
+        function displayFilesList(files) {
+            filesList.innerHTML = '';
+            files.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <span class="file-icon">📄</span>
+                    <div class="file-item-info">
+                        <div class="file-item-name">${file.name}</div>
+                        <div class="file-item-size">${formatFileSize(file.size)}</div>
+                    </div>
+                    <button type="button" class="file-remove" data-index="${index}">✕</button>
+                `;
+                filesList.appendChild(fileItem);
+            });
+            
+            // 绑定删除按钮事件
+            filesList.querySelectorAll('.file-remove').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const index = parseInt(btn.getAttribute('data-index'));
+                    removeFile(index);
+                });
+            });
+            
+            fileUploadContent.style.display = 'none';
+            fileInfo.style.display = 'block';
+        }
+        
+        function removeFile(index) {
+            const dt = new DataTransfer();
+            const files = Array.from(fileInput.files);
+            files.splice(index, 1);
+            
+            files.forEach(file => dt.items.add(file));
+            fileInput.files = dt.files;
+            
+            if (fileInput.files.length > 0) {
+                handleFileSelect();
+            } else {
+                clearFileSelection();
             }
         }
         
@@ -1090,6 +1170,7 @@
             fileInput.value = '';
             fileUploadContent.style.display = 'block';
             fileInfo.style.display = 'none';
+            filesList.innerHTML = '';
         }
         
         function formatFileSize(bytes) {
@@ -1321,12 +1402,12 @@
             const clueAmount = document.getElementById('amount').value;
             const clueLocation = document.getElementById('location').value;
             const fileInput = document.getElementById('file');
-            const file = fileInput.files[0];
+            const files = fileInput.files;
             const resultContent = document.getElementById('resultContent');
             const resultEmpty = document.getElementById('resultEmpty');
             
             // 检查所有必需字段
-            if (!file) {
+            if (!files || files.length === 0) {
                 showFloatingToast('请先上传取现信息文件', 'warning', 3000);
                 return;
             }
@@ -1366,9 +1447,12 @@
             
             try {
                 // 第一步：上传文件
-                showProgress(10, '正在上传文件...');
+                showProgress(10, `正在上传 ${files.length} 个文件...`);
                 const formData = new FormData();
-                formData.append('file', file);
+                // 添加所有文件
+                for (let i = 0; i < files.length; i++) {
+                    formData.append('file', files[i]);
+                }
                 formData.append('datetime', clueTime);
                 formData.append('amount', clueAmount);
                 
