@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>取现预警系统2.0</title>
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="shortcut icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            max-width: 1000px; 
+            margin: 10px auto; 
+            padding: 15px; 
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            line-height: 1.5;
+        }
+        .container {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+        .page-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .page-title h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+            font-weight: bold;
+        }
+        .top-row { 
+            display: flex;
+            gap: 20px; 
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            align-items: start;
+        }
+        .top-row > .field { 
+            flex: 1; 
+            min-width: 200px;
+        }
+        .top-row > .field:last-child {
+            flex: 0 0 auto;
+            min-width: auto;
+            width: 88px;
+        }
+        .top-row > .form-row {
+            flex: 1;
+            width: 100%;
+        }
+        .field-input-area {
+            min-height: 56px;
+            max-height: 56px;
+            display: flex;
+            align-items: center;
+        }
+        .file-upload-area { 
+            border: 1px solid #ccc; 
+            border-radius: 8px;
+            padding: 16px 20px; 
+            text-align: center; 
+            cursor: pointer; 
+            background: #f9f9f9;
+            min-height: 56px;
+            max-height: 56px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .file-upload-area:hover { 
+            border-color: #666; 
+            background: #f0f0f0;
+        }
+        .file-upload-area.dragover { 
+            border-color: #333; 
+            background: #e8e8e8;
+        }
+        .file-upload-icon { 
+            font-size: 20px; 
+            margin-right: 12px; 
+            flex-shrink: 0;
+        }
+        .file-upload-text { 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .file-upload-text .primary-text { 
+            font-size: 16px; 
+            color: #2d3748; 
+            font-weight: 600; 
+            margin-bottom: 2px;
+            line-height: 1.2;
+        }
+        .file-upload-text .secondary-text { 
+            font-size: 12px; 
+            color: #718096;
+            opacity: 0.8;
+            line-height: 1.2;
+        }
+        .file-info { 
+            margin-top: 0;
+        }
+        .file-preview { 
+            display: flex; 
+            align-items: center; 
+            padding: 16px 20px; 
+            background: #ffffff; 
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            min-height: 56px;
+            max-height: 56px;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .file-preview:hover {
+            border-color: #666;
+        }
+        .file-icon { 
+            font-size: 20px; 
+            margin-right: 12px;
+            color: #667eea;
+        }
+        .file-details { 
+            flex: 1; 
+            text-align: left; 
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .file-name { 
+            font-size: 14px; 
+            font-weight: 600; 
+            color: #2d3748; 
+            margin-bottom: 2px;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 200px;
+        }
+        .file-size { 
+            font-size: 11px; 
+            color: #718096;
+            line-height: 1.2;
+        }
+        .file-remove { 
+            background: #ef4444; 
+            color: white; 
+            border: none; 
+            border-radius: 50%; 
+            width: 20px; 
+            height: 20px; 
+            cursor: pointer; 
+            font-size: 12px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .file-remove:hover { background: #dc2626; }
+        .amount-input, .datetime-display, .location-input { 
+            width: 100%; 
+            padding: 16px 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 8px;
+            font-size: 14px; 
+            background: white;
+            min-height: 56px;
+            max-height: 56px;
+            box-sizing: border-box;
+        }
+        .amount-input:focus, .datetime-display:hover, .location-input:focus { 
+            outline: none; 
+            border-color: #666;
+        }
+        .amount-currency { 
+            position: absolute; 
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%); 
+            color: #666;
+            font-size: 14px;
+        }
+        .amount-input { 
+            padding-left: 44px;
+            padding-right: 20px;
+        }
+        .datetime-display {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .amount-input.error { border-color: #ef4444; }
+        .amount-input.success { border-color: #10b981; }
+        
+        /* 悬浮提示样式 */
+        .floating-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #10b981;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 1000;
+            transform: translateX(400px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-toast.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .floating-toast.hide {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        
+        .floating-toast.success {
+            background: #10b981;
+        }
+        
+        .floating-toast.error {
+            background: #ef4444;
+        }
+        
+        .floating-toast.warning {
+            background: #f59e0b;
+        }
+        
+        .floating-toast.info {
+            background: #3b82f6;
+        }
+        .amount-suggestions { position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid #d1d5db; border-top: none; border-radius: 0 0 6px 6px; padding: 8px; display: flex; gap: 8px; flex-wrap: wrap; z-index: 1000; }
+        .amount-quick { background: #f3f4f6; color: #374151; border: 1px solid #d1d5db; padding: 4px 8px; border-radius: 4px; font-size: 12px; cursor: pointer; transition: all 0.2s; }
+        .amount-quick:hover { background: #e5e7eb; }
+        .amount-feedback { 
+            font-size: 12px; 
+            margin-top: 4px; 
+            min-height: 16px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+        .amount-feedback.error { color: #ef4444; }
+        .amount-feedback.success { color: #10b981; }
+        .amount-feedback.info { color: #6b7280; }
+        .btn { background: #2563eb; color: white; border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+        .btn:disabled { background: #9aa7cc; cursor: not-allowed; }
+        .field { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px;
+            min-height: 88px;
+            max-height: 88px;
+        }
+        
+        /* 新增：水平表单布局样式 */
+        .form-row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+        
+        .form-col {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .form-col-auto {
+            flex: none;
+            width: auto;
+        }
+        .field label { 
+            flex-shrink: 0; 
+            font-weight: bold; 
+            color: #333; 
+            font-size: 14px;
+            margin-bottom: 8px;
+            min-height: 20px;
+            max-height: 20px;
+            line-height: 20px;
+        }
+        .messages { margin-top: 20px; }
+        .msg { 
+            padding: 12px; 
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+        }
+        .msg.error { 
+            background: #ffe6e6; 
+            color: #cc0000;
+            border-color: #ff9999;
+        }
+        .msg.success { 
+            background: #e6ffe6; 
+            color: #006600;
+            border-color: #99ff99;
+        }
+        header { 
+            margin-bottom: 10px;
+        }
+        .datetime-picker { position: relative; width: 100%; }
+        .datetime-display { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 16px 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 8px;
+            background: #ffffff; 
+            cursor: pointer;
+            min-height: 56px;
+            max-height: 56px;
+            box-sizing: border-box;
+        }
+        .datetime-display:hover { 
+            border-color: #666; 
+        }
+        .datetime-display.active { 
+            border-color: #333; 
+        }
+        .datetime-picker { 
+            position: relative; 
+            width: 100%; 
+        }
+        .datetime-text { 
+            color: #333; 
+            font-size: 14px; 
+        }
+        .datetime-text.placeholder { 
+            color: #666; 
+        }
+        .datetime-icon { font-size: 16px; }
+        .datetime-dropdown { position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid #d1d5db; border-radius: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 16px; z-index: 1000; display: none; }
+        .datetime-dropdown.show { display: block; }
+        .datetime-quick-select { margin-bottom: 16px; }
+        .datetime-quick-select label { display: block; font-size: 12px; color: #6b7280; margin-bottom: 8px; font-weight: 500; }
+        .quick-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+        .quick-btn { background: #f3f4f6; color: #374151; border: 1px solid #d1d5db; padding: 4px 8px; border-radius: 4px; font-size: 12px; cursor: pointer; transition: all 0.2s; }
+        .quick-btn:hover { background: #e5e7eb; }
+        .quick-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+        .datetime-inputs { display: flex; gap: 12px; margin-bottom: 12px; }
+        .input-group { flex: 1; }
+        .input-group label { display: block; font-size: 12px; color: #6b7280; margin-bottom: 4px; }
+        .input-group input { width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px; font-size: 14px; }
+        .input-group input:focus { outline: none; border-color: #2563eb; }
+        .datetime-range-info { font-size: 11px; color: #6b7280; margin-bottom: 12px; padding: 8px; background: #f9fafb; border-radius: 4px; }
+        .datetime-actions { display: flex; gap: 8px; justify-content: flex-end; }
+        .btn-confirm { background: #2563eb; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; }
+        .btn-cancel { background: #f3f4f6; color: #374151; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer; }
+        .btn-confirm:hover { background: #1d4ed8; }
+        .btn-cancel:hover { background: #e5e7eb; }
+        .btn-confirm:disabled { background: #9ca3af; cursor: not-allowed; }
+        .table-container { 
+            margin-top: 30px; 
+            border: 1px solid #ccc; 
+            background: white;
+        }
+        .table-header { 
+            background: #f0f0f0; 
+            padding: 15px 20px; 
+            border-bottom: 1px solid #ccc; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+        }
+        .table-header h2 { 
+            margin: 0; 
+            font-size: 18px; 
+            color: #333; 
+            font-weight: bold;
+        }
+
+        .scoring-btn { 
+            background: #4169E1; 
+            color: white; 
+            border: none; 
+            border-radius: 8px;
+            padding: 16px 20px; 
+            cursor: pointer; 
+            font-size: 14px;
+            min-height: 56px;
+            max-height: 56px;
+            width: auto;
+            min-width: 80px;
+            box-sizing: border-box;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scoring-btn:hover { 
+            background: #1e3a8a; 
+        }
+        .scoring-btn:disabled { 
+            background: #ccc; 
+            cursor: not-allowed;
+        }
+        .table-content { padding: 16px; max-height: 400px; overflow: auto; }
+        .table-empty { text-align: center; color: #9ca3af; padding: 40px; font-size: 14px; }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            font-size: 15px;
+            margin: 0;
+        }
+        .data-table th, .data-table td { 
+            padding: 8px 12px; 
+            text-align: left; 
+            border-bottom: 1px solid #ccc;
+        }
+        .data-table th { 
+            background: #f0f0f0; 
+            font-weight: bold; 
+            color: #333;
+            font-size: 14px;
+        }
+        .data-table tr:hover { 
+            background: #f9f9f9;
+        }
+        .data-table td { color: #6b7280; }
+        .score-badge { padding: 4px 8px; font-size: 12px; font-weight: bold; }
+        .score-high { background: #d4edda; color: #155724; }
+        .score-medium { background: #fff3cd; color: #856404; }
+        .score-low { background: #f8d7da; color: #721c24; }
+        .score-details { font-size: 11px; color: #6b7280; margin-top: 2px; }
+        .loading { display: none; color: #2563eb; }
+        .match-level { padding: 2px 6px; border-radius: 3px; font-size: 11px; font-weight: 500; }
+        .match-very-high { background: #ecfdf5; color: #065f46; }
+        .match-high { background: #f0fdf4; color: #166534; }
+        .match-medium { background: #fefce8; color: #a16207; }
+        .match-low { background: #fef2f2; color: #b91c1c; }
+        .analysis-summary { 
+            background: #f9f9f9; 
+            border: 1px solid #ccc; 
+            padding: 15px; 
+            margin-bottom: 15px;
+        }
+        .loading-animation {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #ccc;
+            border-top-color: #333;
+            animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .result-container {
+            background: white;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+        .result-header {
+            background: #f0f0f0;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .result-header h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .result-content {
+            padding: 20px 30px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .match-level { padding: 3px 6px; font-size: 11px; font-weight: bold; }
+        
+        /* 弹窗样式 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-overlay.show {
+            display: flex;
+        }
+        .modal-content {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        .modal-header {
+            background: #f0f0f0;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #666;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-close:hover {
+            color: #333;
+            background: #ddd;
+            border-radius: 50%;
+        }
+        .modal-body {
+            padding: 20px;
+        }
+        .detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .detail-table th,
+        .detail-table td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .detail-table th {
+            background: #f9f9f9;
+            font-weight: bold;
+            color: #333;
+            width: 30%;
+        }
+        .detail-table td {
+            color: #666;
+        }
+        .detail-table tr:last-child th,
+        .detail-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* 进度条样式 */
+        .progress-container {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .progress-container.show {
+            display: block;
+        }
+        
+        .progress-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .progress-bar-wrapper {
+            width: 100%;
+            height: 30px;
+            background: #e1e8ed;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            width: 0%;
+            transition: width 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-bar-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            animation: shimmer 1.5s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .progress-percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            z-index: 10;
+            text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+        }
+        
+        .progress-status {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="page-title">
+        <h1>取现预警系统2.0</h1>
+    </div>
+    
+    <header>
+    <div class="top-row">
+        <!-- 水平表单布局：文件上传、时间、金额、地区、确定按钮 -->
+        <div class="form-row">
+            <!-- 文件上传 -->
+            <div class="form-col">
+                <div class="file-upload-area" id="fileUploadArea">
+                    <input id="file" name="file" type="file" accept=".csv,.xlsx,.xls" required style="display: none;" />
+                    <div class="file-upload-content" id="fileUploadContent">
+                        <div class="file-upload-text">
+                            <div class="primary-text">取现数据上传</div>
+                        </div>
+                    </div>
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <div class="file-preview">
+                            <span class="file-icon">📄</span>
+                            <div class="file-details">
+                                <div class="file-name" id="fileName"></div>
+                                <div class="file-size" id="fileSize"></div>
+                            </div>
+                            <button type="button" class="file-remove" id="fileRemove">✕</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 时间选择器 -->
+            <div class="form-col">
+                <div class="datetime-picker" id="datetimePicker">
+                    <div class="datetime-display" id="datetimeDisplay">
+                        <span class="datetime-text">请选择日期时间</span>
+                        <span class="datetime-icon">📅</span>
+                    </div>
+                    <div class="datetime-dropdown" id="datetimeDropdown">
+                        <div class="datetime-quick-select">
+                            <label>快捷选择</label>
+                            <div class="quick-buttons">
+                                <button type="button" class="quick-btn" data-type="now">现在</button>
+                                <button type="button" class="quick-btn" data-type="1hour">一小时前</button>
+                                <button type="button" class="quick-btn" data-type="3hours">三小时前</button>
+                            </div>
+                        </div>
+                        <div class="datetime-inputs">
+                            <div class="input-group">
+                                <label>日期</label>
+                                <input id="date-input" type="date" required />
+                            </div>
+                            <div class="input-group">
+                                <label>时间</label>
+                                <input id="time-input" type="time" required />
+                            </div>
+                        </div>
+                        <div class="datetime-actions">
+                            <button type="button" class="btn-confirm" id="confirmBtn">确认</button>
+                            <button type="button" class="btn-cancel" id="cancelBtn">取消</button>
+                        </div>
+                    </div>
+                    <input id="datetime" name="datetime" type="hidden" required />
+                </div>
+            </div>
+            
+            <!-- 金额输入框 -->
+            <div class="form-col">
+                <div class="amount-input-container" style="position: relative; width: 100%;">
+                    <span class="amount-currency">￥</span>
+                    <input id="amount" name="amount" type="text" placeholder="线索金额" required class="amount-input" />
+                    <div class="amount-feedback" id="amountFeedback"></div>
+                </div>
+            </div>
+            
+            <!-- 地区信息输入框 -->
+            <div class="form-col">
+                <input id="location" name="location" type="text" placeholder="地区信息" class="location-input" />
+            </div>
+            
+            <!-- 确定按钮 -->
+            <div class="form-col-auto">
+                <button class="scoring-btn" id="scoringBtn" onclick="performScoring()">
+                    <span class="loading" id="loadingText" style="display: none;">
+                        <span class="loading-animation"></span> 分析中...
+                    </span>
+                    <span id="btnText">确定</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="messages">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="msg {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <hr />
+</header>
+
+<main>
+    <!-- 结果输出区域 -->
+    <div class="result-section">
+        <div class="result-container" id="resultContainer">
+            <div class="result-header">
+                <h3>评分结果</h3>
+            </div>
+            <!-- 进度条容器 -->
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-title">正在分析数据...</div>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar-fill" id="progressBarFill"></div>
+                    <div class="progress-percentage" id="progressPercentage">0%</div>
+                </div>
+                <div class="progress-status" id="progressStatus">准备开始...</div>
+            </div>
+            <div class="result-content" id="resultContent">
+                <div class="result-empty" id="resultEmpty">
+                    <p>请填写完整信息并点击"确定"按钮查看结果</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 原有的表格容器保留作为备用 -->
+    <div class="table-container" id="tableContainer" style="display: none;">
+        <div class="table-header">
+            <h2>取现信息评分分析</h2>
+        </div>
+        <div class="table-content" id="tableContent">
+            <div class="table-empty" id="emptyState">
+                <p>请上传取现信息文件，输入线索时间和金额，然后点击"确定"查看结果</p>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+
+<!-- 人员详情弹窗 -->
+<div class="modal-overlay" id="personDetailModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">人员详细信息</h3>
+            <button class="modal-close" onclick="hidePersonDetail()">×</button>
+        </div>
+        <div class="modal-body">
+            <table class="detail-table" id="personDetailTable">
+                <!-- 详情内容将通过 JavaScript 填充 -->
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 全局变量存储评分结果数据
+    let currentScoredPersons = [];
+    let originalPersonsData = []; // 新增：存储完整的原始数据
+    
+    (function(){
+        // Initialize DOM elements
+        const picker = document.getElementById('datetimePicker');
+        const display = document.getElementById('datetimeDisplay');
+        const dropdown = document.getElementById('datetimeDropdown');
+        const dateInput = document.getElementById('date-input');
+        const timeInput = document.getElementById('time-input');
+        const datetimeInput = document.getElementById('datetime');
+        const datetimeText = display.querySelector('.datetime-text');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const quickButtons = document.querySelectorAll('.quick-btn');
+        
+        const fileInput = document.getElementById('file');
+        const fileUploadArea = document.getElementById('fileUploadArea');
+        const fileUploadContent = document.getElementById('fileUploadContent');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const fileSize = document.getElementById('fileSize');
+        const fileRemove = document.getElementById('fileRemove');
+        
+        const amountInput = document.getElementById('amount');
+        const amountSuggestions = document.getElementById('amountSuggestions'); // 这个元素不存在
+        const amountFeedback = document.getElementById('amountFeedback');
+        const amountQuickButtons = document.querySelectorAll('.amount-quick'); // 这个也不存在
+        
+        // 添加安全检查
+        console.log('amountSuggestions 元素:', amountSuggestions);
+        console.log('amountQuickButtons 元素:', amountQuickButtons);
+        
+        let isOpen = false;
+        let currentQuickSelection = null;
+        
+        amountInput.addEventListener('input', handleAmountInput);
+        
+        if (amountSuggestions) {
+            amountInput.addEventListener('focus', showAmountSuggestions);
+            amountInput.addEventListener('blur', () => {
+                setTimeout(() => {
+                    hideAmountSuggestions();
+                    // 在失去焦点时进行验证
+                    validateAmountOnBlur();
+                }, 200);
+            });
+        } else {
+            amountInput.addEventListener('blur', () => {
+                setTimeout(() => {
+                    // 在失去焦点时进行验证
+                    validateAmountOnBlur();
+                }, 200);
+            });
+        }
+        
+        amountQuickButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const value = btn.getAttribute('data-value');
+                amountInput.value = formatAmount(parseFloat(value));
+                validateAmount(parseFloat(value));
+                if (amountSuggestions) {
+                    hideAmountSuggestions();
+                }
+            });
+        });
+        
+        function handleAmountInput(e) {
+            let value = e.target.value;
+            value = value.replace(/[^\d.,]/g, '');
+            value = value.replace(/,/g, '');
+            
+            const parts = value.split('.');
+            if (parts.length > 2) {
+                value = parts[0] + '.' + parts.slice(1).join('');
+            }
+            
+            if (parts[1] && parts[1].length > 2) {
+                value = parts[0] + '.' + parts[1].substring(0, 2);
+            }
+            
+            e.target.value = value;
+            
+            // 输入过程中只清除之前的样式，不显示验证结果
+            amountInput.classList.remove('error', 'success');
+            amountFeedback.textContent = '';
+            amountFeedback.className = 'amount-feedback info';
+        }
+        
+        function formatAmount(amount) {
+            return amount.toLocaleString('zh-CN', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+        }
+        
+        function validateAmount(amount) {
+            amountInput.classList.remove('error', 'success');
+            
+            if (amount <= 0) {
+                showAmountError('金额必须大于 0');
+                return false;
+            } else if (amount > 10000000) {
+                showAmountError('金额过大，请输入合理的金额');
+                return false;
+            } else if (amount < 0.01) {
+                showAmountError('金额太小，最小为 0.01 元');
+                return false;
+            } else {
+                showAmountSuccess('金额格式正确 ✓');
+                return true;
+            }
+        }
+        
+        // 新增：失去焦点时的验证函数
+        function validateAmountOnBlur() {
+            const value = amountInput.value.trim();
+            
+            // 如果输入框为空，不显示任何提示
+            if (value === '') {
+                resetAmountFeedback();
+                return;
+            }
+            
+            const numValue = parseFloat(value);
+            if (isNaN(numValue)) {
+                showAmountError('请输入有效的数字');
+            } else {
+                validateAmount(numValue);
+            }
+        }
+        
+        function showAmountError(message) {
+            amountInput.classList.add('error');
+            amountInput.classList.remove('success');
+            amountFeedback.textContent = message;
+            amountFeedback.className = 'amount-feedback error';
+        }
+        
+        function showAmountSuccess(message) {
+            amountInput.classList.add('success');
+            amountInput.classList.remove('error');
+            amountFeedback.textContent = message;
+            amountFeedback.className = 'amount-feedback success';
+            
+            // 显示悬浮提示
+            showFloatingToast('金额格式正确 ✓', 'success', 2000);
+        }
+        
+        function resetAmountFeedback() {
+            amountInput.classList.remove('error', 'success');
+            amountFeedback.className = 'amount-feedback info';
+        }
+        
+        // 悬浮提示功能
+        function showFloatingToast(message, type = 'success', duration = 3000) {
+            // 移除之前的提示
+            const existingToast = document.querySelector('.floating-toast');
+            if (existingToast) {
+                existingToast.remove();
+            }
+            
+            // 创建新的提示元素
+            const toast = document.createElement('div');
+            toast.className = `floating-toast ${type}`;
+            toast.textContent = message;
+            
+            // 添加到页面
+            document.body.appendChild(toast);
+            
+            // 显示动画
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            // 自动隐藏
+            setTimeout(() => {
+                toast.classList.remove('show');
+                toast.classList.add('hide');
+                
+                // 删除元素
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 300);
+            }, duration);
+        }
+        
+        function showAmountSuggestions() {
+            if (amountSuggestions) {
+                amountSuggestions.style.display = 'flex';
+            }
+        }
+        
+        function hideAmountSuggestions() {
+            if (amountSuggestions) {
+                amountSuggestions.style.display = 'none';
+            }
+        }
+        
+        // File upload functionality
+        fileUploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', handleFileSelect);
+        
+        fileUploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.add('dragover');
+        });
+        
+        fileUploadArea.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.remove('dragover');
+        });
+        
+        fileUploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                handleFileSelect();
+            }
+        });
+        
+        fileRemove.addEventListener('click', (e) => {
+            e.stopPropagation();
+            clearFileSelection();
+        });
+        
+        function handleFileSelect() {
+            const file = fileInput.files[0];
+            if (file) {
+                const allowedTypes = ['.csv', '.xlsx', '.xls'];
+                const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+                
+                if (!allowedTypes.includes(fileExtension)) {
+                    showFloatingToast('不支持的文件格式！请选择 CSV 或 Excel 文件', 'error', 4000);
+                    clearFileSelection();
+                    return;
+                }
+                
+                if (file.size > 32 * 1024 * 1024) {
+                    showFloatingToast('文件大小超过限制！请选择小于 32MB 的文件', 'error', 4000);
+                    clearFileSelection();
+                    return;
+                }
+                
+                fileName.textContent = file.name;
+                fileSize.textContent = formatFileSize(file.size);
+                fileUploadContent.style.display = 'none';
+                fileInfo.style.display = 'block';
+                
+                // 显示悬浮提示
+                showFloatingToast('文件上传成功 ✓', 'success', 2000);
+            }
+        }
+        
+        function clearFileSelection() {
+            fileInput.value = '';
+            fileUploadContent.style.display = 'block';
+            fileInfo.style.display = 'none';
+        }
+        
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        // DateTime picker functionality
+        display.addEventListener('click', toggleDropdown);
+        
+        quickButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const type = btn.getAttribute('data-type');
+                handleQuickSelection(type, btn);
+            });
+        });
+        
+        function handleQuickSelection(type, buttonElement) {
+            const now = new Date();
+            let targetDate;
+            
+            quickButtons.forEach(btn => btn.classList.remove('active'));
+            buttonElement.classList.add('active');
+            currentQuickSelection = type;
+            
+            switch(type) {
+                case 'now':
+                    targetDate = now;
+                    break;
+                case '1hour':
+                    targetDate = new Date(now.getTime() - 60 * 60 * 1000);
+                    break;
+                case '3hours':
+                    targetDate = new Date(now.getTime() - 3 * 60 * 60 * 1000);
+                    break;
+                case 'today':
+                    targetDate = new Date(now);
+                    targetDate.setHours(8, 0, 0, 0);
+                    break;
+                case 'yesterday':
+                    targetDate = new Date(now);
+                    targetDate.setDate(targetDate.getDate() - 1);
+                    targetDate.setHours(8, 0, 0, 0);
+                    break;
+                case 'week':
+                    targetDate = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+                    break;
+                default:
+                    targetDate = now;
+            }
+            
+            const dateStr = targetDate.toISOString().split('T')[0];
+            const timeStr = targetDate.toTimeString().split(' ')[0].substring(0, 5);
+            
+            dateInput.value = dateStr;
+            timeInput.value = timeStr;
+            
+            validateDateTimeRange();
+        }
+        
+        function validateDateTimeRange() {
+            const date = dateInput.value;
+            const time = timeInput.value;
+            
+            if (date && time) {
+                const selectedDate = new Date(date + 'T' + time);
+                const now = new Date();
+                const oneMonthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+                const oneDayLater = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+                
+                if (selectedDate < oneMonthAgo) {
+                    confirmBtn.disabled = true;
+                    confirmBtn.textContent = '日期过早';
+                } else if (selectedDate > oneDayLater) {
+                    confirmBtn.disabled = true;
+                    confirmBtn.textContent = '日期过晚';
+                } else {
+                    confirmBtn.disabled = false;
+                    confirmBtn.textContent = '确认';
+                }
+            } else {
+                confirmBtn.disabled = true;
+                confirmBtn.textContent = '请选择';
+            }
+        }
+        
+        function formatDisplayText(date, time) {
+            if (!date || !time) return '请选择日期时间';
+            const dateObj = new Date(date + 'T' + time);
+            const year = dateObj.getFullYear();
+            const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+            const day = String(dateObj.getDate()).padStart(2, '0');
+            const hour = String(dateObj.getHours()).padStart(2, '0');
+            const minute = String(dateObj.getMinutes()).padStart(2, '0');
+            return `${year}-${month}-${day} ${hour}:${minute}`;
+        }
+        
+        function toggleDropdown() {
+            isOpen = !isOpen;
+            dropdown.classList.toggle('show', isOpen);
+            display.classList.toggle('active', isOpen);
+        }
+        
+        function closeDropdown() {
+            isOpen = false;
+            dropdown.classList.remove('show');
+            display.classList.remove('active');
+        }
+        
+        function updateDateTime() {
+            const date = dateInput.value;
+            const time = timeInput.value;
+            
+            if (date && time) {
+                datetimeInput.value = date + 'T' + time;
+                datetimeText.textContent = formatDisplayText(date, time);
+                datetimeText.classList.remove('placeholder');
+            } else {
+                datetimeInput.value = '';
+                datetimeText.textContent = '请选择日期时间';
+                datetimeText.classList.add('placeholder');
+            }
+        }
+        
+        function clearQuickSelection() {
+            quickButtons.forEach(btn => btn.classList.remove('active'));
+            currentQuickSelection = null;
+        }
+        
+        dateInput.addEventListener('change', () => {
+            clearQuickSelection();
+            validateDateTimeRange();
+        });
+        
+        timeInput.addEventListener('change', () => {
+            clearQuickSelection();
+            validateDateTimeRange();
+        });
+        
+        confirmBtn.addEventListener('click', () => {
+            updateDateTime();
+            closeDropdown();
+            // 显示悬浮提示
+            const date = dateInput.value;
+            const time = timeInput.value;
+            if (date && time) {
+                showFloatingToast('时间设置成功 ✓', 'success', 2000);
+            }
+        });
+        
+        cancelBtn.addEventListener('click', closeDropdown);
+        
+        document.addEventListener('click', (e) => {
+            if (!picker.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+        
+        [dateInput, timeInput].forEach(input => {
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    confirmBtn.click();
+                }
+            });
+        });
+        
+        // Set current date and time as default
+        const now = new Date();
+        const currentDate = now.toISOString().split('T')[0];
+        const currentTime = now.toTimeString().split(' ')[0].substring(0, 5);
+        dateInput.value = currentDate;
+        timeInput.value = currentTime;
+        updateDateTime();
+        
+        // Initialize amount feedback
+        resetAmountFeedback();
+        
+        // 进度条控制函数
+        function showProgress(percent, status) {
+            const progressContainer = document.getElementById('progressContainer');
+            const progressBarFill = document.getElementById('progressBarFill');
+            const progressPercentage = document.getElementById('progressPercentage');
+            const progressStatus = document.getElementById('progressStatus');
+            
+            progressContainer.classList.add('show');
+            progressBarFill.style.width = percent + '%';
+            progressPercentage.textContent = percent + '%';
+            progressStatus.textContent = status;
+        }
+        
+        function hideProgress() {
+            const progressContainer = document.getElementById('progressContainer');
+            progressContainer.classList.remove('show');
+        }
+        
+        // 模拟进度更新
+        function updateProgress(currentPercent, targetPercent, speed = 2) {
+            return new Promise((resolve) => {
+                let percent = currentPercent;
+                const interval = setInterval(() => {
+                    percent = Math.min(percent + speed, targetPercent);
+                    const p = Math.floor(percent);
+                    
+                    if (p < 30) {
+                        showProgress(p, '正在上传文件...');
+                    } else if (p < 60) {
+                        showProgress(p, '正在处理数据...');
+                    } else if (p < 90) {
+                        showProgress(p, '正在进行评分分析...');
+                    } else {
+                        showProgress(p, '即将完成...');
+                    }
+                    
+                    if (percent >= targetPercent) {
+                        clearInterval(interval);
+                        resolve();
+                    }
+                }, 100);
+            });
+        }
+        
+        // Scoring functionality
+        window.performScoring = async function() {
+            const clueTime = datetimeInput.value;
+            const clueAmount = document.getElementById('amount').value;
+            const clueLocation = document.getElementById('location').value;
+            const fileInput = document.getElementById('file');
+            const file = fileInput.files[0];
+            const resultContent = document.getElementById('resultContent');
+            const resultEmpty = document.getElementById('resultEmpty');
+            
+            // 检查所有必需字段
+            if (!file) {
+                showFloatingToast('请先上传取现信息文件', 'warning', 3000);
+                return;
+            }
+            if (!clueTime) {
+                showFloatingToast('请先选择线索时间', 'warning', 3000);
+                return;
+            }
+            if (!clueAmount) {
+                showFloatingToast('请先输入线索金额', 'warning', 3000);
+                return;
+            }
+            if (!clueLocation || clueLocation.trim() === '') {
+                showFloatingToast('请输入地区信息', 'warning', 3000);
+                return;
+            }
+            
+            const scoringBtn = document.getElementById('scoringBtn');
+            const loadingText = document.getElementById('loadingText');
+            const btnText = document.getElementById('btnText');
+            const tableContent = document.getElementById('tableContent');
+            
+            // Show loading state
+            scoringBtn.disabled = true;
+            loadingText.style.display = 'inline-flex';
+            loadingText.style.alignItems = 'center';
+            loadingText.style.gap = '8px';
+            btnText.style.display = 'none';
+            
+            // 清空之前的结果并隐藏
+            resultContent.innerHTML = '';
+            if (resultEmpty) {
+                resultEmpty.style.display = 'none';
+            }
+            
+            // 显示进度条
+            showProgress(0, '准备开始...');
+            
+            try {
+                // 第一步：上传文件
+                showProgress(10, '正在上传文件...');
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('datetime', clueTime);
+                formData.append('amount', clueAmount);
+                
+                // 模拟上传进度
+                await updateProgress(10, 35, 3);
+                
+                const uploadResponse = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!uploadResponse.ok) {
+                    throw new Error('文件上传失败');
+                }
+                
+                // 第二步：执行评分分析
+                showProgress(40, '正在处理数据...');
+                await updateProgress(40, 65, 2);
+                
+                showProgress(70, '正在进行评分分析...');
+                
+                const scoringResponse = await fetch('/scoring', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        clue_time: clueTime,
+                        clue_amount: parseFloat(clueAmount),
+                        clue_location: clueLocation.trim()
+                    })
+                });
+                
+                if (!scoringResponse.ok) {
+                    throw new Error('评分分析失败');
+                }
+                
+                const result = await scoringResponse.json();
+                
+                // 检查响应数据结构
+                console.log('后端返回的数据:', result);
+                
+                if (result.success) {
+                    // 进度条到100%
+                    await updateProgress(70, 95, 2);
+                    showProgress(95, '正在生成报告...');
+                    
+                    // 模拟最后一点时间
+                    await new Promise(resolve => setTimeout(resolve, 300));
+                    showProgress(100, '分析完成！');
+                    
+                    // 等待一秒后隐藏进度条并显示结果
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                    hideProgress();
+                    
+                    // 显示评分结果
+                    displayScoringResult(result.data);
+                    
+                    // 显示悬浮提示
+                    showFloatingToast('评分分析完成 ✓', 'success', 3000);
+                } else {
+                    throw new Error(result.error || '评分分析失败');
+                }
+                
+            } catch (error) {
+                console.error('评分分析错误:', error);
+                
+                // 隐藏进度条
+                hideProgress();
+                
+                resultContent.innerHTML = '<div class="table-empty"><p>❌ ' + error.message + '，请重试</p></div>';
+                if (resultEmpty) {
+                    resultEmpty.style.display = 'block';
+                }
+                
+                // 显示错误提示
+                showFloatingToast(error.message, 'error', 4000);
+            } finally {
+                // Hide loading state
+                scoringBtn.disabled = false;
+                loadingText.style.display = 'none';
+                btnText.style.display = 'inline-flex';
+                btnText.style.alignItems = 'center';
+                btnText.style.gap = '8px';
+            }
+        };
+        
+        function displayScoringResult(result) {
+            const resultContent = document.getElementById('resultContent');
+            const resultEmpty = document.getElementById('resultEmpty');
+            
+            // 保存评分结果数据到全局变量
+            currentScoredPersons = result.scored_persons || [];
+            console.log('保存的评分数据:', currentScoredPersons);
+            
+            // 隐藏空状态
+            if (resultEmpty) {
+                resultEmpty.style.display = 'none';
+            }
+            
+            // 创建结果概要
+            const summary = document.createElement('div');
+            summary.className = 'analysis-summary';
+            summary.innerHTML = `
+                <div style="font-weight: bold; color: #333; margin-bottom: 16px; font-size: 18px;">
+                    评分分析结果
+                </div>
+                <div style="font-size: 14px; color: #333; line-height: 1.8; margin-bottom: 16px;">
+                    <strong>线索时间:</strong> ${result.target_info.time} | 
+                    <strong>线索金额:</strong> ￥${result.target_info.amount.toLocaleString()} | 
+                    <strong>分析人数:</strong> ${result.total_persons}人
+                </div>
+                ${result.top_match ? `<div style="font-size: 14px; color: #333; margin-bottom: 16px; padding: 12px; background: #f9f9f9; border: 1px solid #ccc;">
+                    <strong>最佳匹配:</strong> ${result.top_match.name} (评分: <strong>${result.top_match.score}分</strong> - ${result.top_match.match_level})
+                </div>` : ''}
+            `;
+            
+            // 创建排名列表
+            const rankingList = document.createElement('div');
+            rankingList.style.marginTop = '30px';
+            
+            const rankingTitle = document.createElement('h4');
+            rankingTitle.innerHTML = '评分排名 (按分数高低排序)';
+            rankingTitle.style.cssText = 'font-size: 16px; color: #333; margin-bottom: 20px; font-weight: bold;';
+            
+            rankingList.appendChild(rankingTitle);
+            
+            // 确保按分数排序 (高到低)
+            const sortedPersons = result.scored_persons.sort((a, b) => b.score - a.score);
+            
+            sortedPersons.forEach((person, index) => {
+                const personCard = document.createElement('div');
+                const isTopRank = index < 3;
+                const rankColor = index === 0 ? '#666' : index === 1 ? '#888' : index === 2 ? '#aaa' : '#e2e8f0';
+                
+                personCard.style.cssText = `
+                    display: flex; 
+                    align-items: center; 
+                    padding: 12px 16px; 
+                    margin-bottom: 8px; 
+                    background: ${isTopRank ? '#f9f9f9' : '#ffffff'}; 
+                    border: 1px solid ${isTopRank ? '#999' : '#ccc'};
+                `;
+                
+                personCard.innerHTML = `
+                    <div style="
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        width: 40px; 
+                        height: 40px; 
+                        background: ${rankColor}; 
+                        border-radius: 50%; 
+                        margin-right: 16px; 
+                        font-weight: 900; 
+                        font-size: 16px;
+                        color: ${index < 3 ? '#ffffff' : '#6b7280'};
+                        ${index < 3 ? 'box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);' : ''}
+                    ">
+                        ${index + 1}
+                    </div>
+                    <div style="flex: 1; display: grid; grid-template-columns: 2fr 2fr 1.5fr 1.5fr 1fr 1fr 1.5fr 1fr; gap: 16px; align-items: center;">
+                        <div>
+                            <div style="font-weight: 700; font-size: 16px; color: #2d3748; margin-bottom: 2px;">${person.name}</div>
+                            <div style="font-size: 12px; color: #718096;">${person.id_number || person.account}</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 14px; color: #4a5568; margin-bottom: 2px;">${formatDateTime(person.withdraw_time)}</div>
+                        </div>
+                        <div style="font-weight: 600; color: #2d3748;">￥${person.amount.toLocaleString()}</div>
+                        <div style="font-size: 14px; color: #4a5568;">${person.location}</div>
+                        <div><span style="padding: 4px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; background: ${getStatusColor(person.status)}; color: white;">${person.status}</span></div>
+                        <div><span class="match-level ${getMatchLevelClass(person.match_level)}" style="padding: 4px 8px; border-radius: 16px; font-size: 11px; font-weight: 600;">${person.match_level}</span></div>
+                        <div style="text-align: center;">
+                            <div class="score-badge ${getScoreClass(person.score)}" style="margin-bottom: 4px;">${person.score}分</div>
+                            <div style="font-size: 10px; color: #6b7280; line-height: 1.2;">
+                                时间:${person.score_details.base_scores.time_score} 金额:${person.score_details.base_scores.amount_score}<br/>
+                                地点:${person.score_details.base_scores.location_score} 附加:${person.score_details.total_additional_score}
+                            </div>
+                        </div>
+                        <div style="text-align: center;">
+                            <button class="detail-btn" data-index="${index}" style="
+                                padding: 6px 12px;
+                                background: #4169E1;
+                                color: white;
+                                border: none;
+                                border-radius: 4px;
+                                font-size: 12px;
+                                cursor: pointer;
+                                transition: background 0.2s;
+                            " onmouseover="this.style.background='#3154C4'" onmouseout="this.style.background='#4169E1'">
+                                查看详情
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                // 添加悬停效果
+                personCard.addEventListener('mouseenter', () => {
+                    personCard.style.transform = 'translateY(-2px) scale(1.02)';
+                    personCard.style.boxShadow = isTopRank ? '0 8px 25px rgba(16, 185, 129, 0.3)' : '0 6px 20px rgba(0, 0, 0, 0.1)';
+                });
+                
+                personCard.addEventListener('mouseleave', () => {
+                    personCard.style.transform = 'translateY(0) scale(1)';
+                    personCard.style.boxShadow = isTopRank ? '0 4px 12px rgba(16, 185, 129, 0.2)' : '0 2px 8px rgba(0, 0, 0, 0.05)';
+                });
+                
+                // 添加详情按钮点击事件
+                const detailBtn = personCard.querySelector('.detail-btn');
+                if (detailBtn) {
+                    console.log('找到详情按钮，为索引', index, '绑定事件');
+                    detailBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('详情按钮被点击，索引:', index);
+                        showPersonDetail(index);
+                    });
+                } else {
+                    console.error('未找到详情按钮，索引:', index);
+                }
+                
+                rankingList.appendChild(personCard);
+            });
+            
+            // 清空并填充内容
+            resultContent.innerHTML = '';
+            resultContent.appendChild(summary);
+            resultContent.appendChild(rankingList);
+            
+            // 滚动到结果区域
+            document.getElementById('resultContainer').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
+        
+        function formatDateTime(dateTimeStr) {
+            try {
+                const date = new Date(dateTimeStr);
+                return date.toLocaleString('zh-CN', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            } catch (e) {
+                return dateTimeStr;
+            }
+        }
+        
+        function getScoreClass(score) {
+            if (score >= 80) return 'score-high';
+            if (score >= 60) return 'score-medium';
+            return 'score-low';
+        }
+        
+        function getMatchLevelClass(level) {
+            const levelMap = {
+                '极高匹配': 'match-very-high',
+                '高匹配': 'match-high',
+                '中等匹配': 'match-medium',
+                '低匹配': 'match-low',
+                '很低匹配': 'match-low'
+            };
+            return levelMap[level] || 'match-low';
+        }
+        
+        function getStatusColor(status) {
+            const colors = { '成功': '#059669', '处理中': '#d97706', '失败': '#dc2626', '异常': '#7c2d12' };
+            return colors[status] || '#6b7280';
+        }
+        
+    })();
+    
+    // 全局函数：显示人员详情
+    function showPersonDetail(index) {
+        console.log('点击了详情按钮，索引:', index);
+        console.log('当前评分人员数据:', currentScoredPersons);
+        
+        if (!currentScoredPersons || index >= currentScoredPersons.length || index < 0) {
+            console.error('数据不存在或索引超出范围，索引:', index, '数据长度:', currentScoredPersons.length);
+            alert('数据不存在或索引错误');
+            return;
+        }
+        
+        const person = currentScoredPersons[index];
+        console.log('获取到的人员数据:', person);
+        
+        const modal = document.getElementById('personDetailModal');
+        const table = document.getElementById('personDetailTable');
+        
+        if (!modal || !table) {
+            console.error('未找到弹窗元素');
+            alert('弹窗元素不存在');
+            return;
+        }
+        
+        // 清空表格内容
+        table.innerHTML = '';
+        
+        // 构建详情数据，显示所有可用信息
+        const details = [
+            // 基本信息
+            { label: '—— 基本信息 ——', value: '', isHeader: true },
+            { label: '姓名', value: person.name || '未知' },
+            { label: '身份证号', value: person.id_number || '未知' },
+            { label: '账户号', value: person.account || '未知' },
+            { label: '手机号', value: extractPhoneFromName(person.name) || '未知' },
+            
+            // 交易信息
+            { label: '—— 交易信息 ——', value: '', isHeader: true },
+            { label: '取现时间', value: person.withdraw_time ? formatDateTime(person.withdraw_time) : '未知' },
+            { label: '取现金额', value: person.amount ? `￥${person.amount.toLocaleString()}` : '未知' },
+            { label: '业务发生地', value: person.location || '未知' },
+            { label: '交易状态', value: person.status || '未知' },
+            { label: '交易次数', value: (person.transaction_count || 1).toString() },
+            
+            // 个人特征
+            { label: '—— 个人特征 ——', value: '', isHeader: true },
+            { label: '性别', value: getGenderText(person.gender) },
+            { label: '历史预警', value: person.has_history_warning ? '是' : '否' },
+            { label: '小众通联', value: person.has_special_comm ? '是' : '否' },
+            { label: '涉黄软件', value: person.has_adult_app ? '是' : '否' },
+            { label: '投资类APP', value: person.has_investment_app ? '是' : '否' },
+            
+            // 评分信息
+            { label: '—— 评分信息 ——', value: '', isHeader: true },
+            { label: '总评分', value: `${person.score}分` },
+            { label: '匹配等级', value: person.match_level || '未知' },
+            { label: '金额类别', value: person.amount_category || '未知' }
+        ];
+        
+        // 添加评分细节
+        if (person.score_details) {
+            const baseScores = person.score_details.base_scores || {};
+            const additionalScores = person.score_details.additional_scores || {};
+            
+            details.push(
+                { label: '—— 评分细节 ——', value: '' },
+                { label: '时间匹配分', value: `${baseScores.time_score || 0}分` },
+                { label: '金额匹配分', value: `${baseScores.amount_score || 0}分` },
+                { label: '地点匹配分', value: `${baseScores.location_score || 0}分` },
+                { label: '性别加分', value: `${additionalScores.gender_score || 0}分` },
+                { label: 'APP加分', value: `${additionalScores.app_score || 0}分` },
+                { label: '历史预警加分', value: `${additionalScores.history_warning_score || 0}分` },
+                { label: '频次加分', value: `${additionalScores.frequency_score || 0}分` }
+            );
+        }
+        
+        // 生成表格行
+        details.forEach(detail => {
+            const row = table.insertRow();
+            const labelCell = row.insertCell(0);
+            const valueCell = row.insertCell(1);
+            
+            if (detail.isHeader) {
+                // 分类标题样式
+                labelCell.colSpan = 2;
+                labelCell.innerHTML = `<th style="text-align: center; background: #f8f9fa; font-weight: bold; color: #495057; padding: 12px;">${detail.label}</th>`;
+                row.style.borderTop = '2px solid #dee2e6';
+            } else {
+                // 普通数据行
+                labelCell.innerHTML = `<th style="background: #f9f9f9; font-weight: bold; color: #333; width: 30%; padding: 8px 12px;">${detail.label}</th>`;
+                valueCell.innerHTML = `<td style="color: #666; padding: 8px 12px;">${detail.value}</td>`;
+            }
+        });
+        
+        // 显示弹窗
+        modal.classList.add('show');
+    }
+    
+    // 全局函数：隐藏人员详情
+    function hidePersonDetail() {
+        const modal = document.getElementById('personDetailModal');
+        modal.classList.remove('show');
+    }
+    
+    // 辅助函数：从姓名中提取手机号
+    function extractPhoneFromName(name) {
+        if (!name) return null;
+        const phoneMatch = name.match(/1[3-9]\d{9}/);
+        return phoneMatch ? phoneMatch[0] : null;
+    }
+    
+    // 辅助函数：性别文本转换
+    function getGenderText(gender) {
+        switch(gender) {
+            case 'male': return '男';
+            case 'female': return '女';
+            default: return '未知';
+        }
+    }
+    
+    // 点击弹窗背景关闭
+    document.addEventListener('click', function(e) {
+        const modal = document.getElementById('personDetailModal');
+        if (e.target === modal) {
+            hidePersonDetail();
+        }
+    });
+    
+    // ESC 键关闭弹窗
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            hidePersonDetail();
+        }
+    });
+    
+    // 页面加载完成后的初始化
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('页面加载完成，函数定义检查:');
+        console.log('showPersonDetail 函数:', typeof showPersonDetail);
+        console.log('hidePersonDetail 函数:', typeof hidePersonDetail);
+        console.log('performScoring 函数:', typeof performScoring);
+        console.log('弹窗元素:', document.getElementById('personDetailModal'));
+        console.log('确定按钮元素:', document.getElementById('scoringBtn'));
+        
+        // 测试按钮点击
+        const scoringBtn = document.getElementById('scoringBtn');
+        if (scoringBtn) {
+            console.log('找到了确定按钮');
+        } else {
+            console.error('未找到确定按钮');
+        }
+    });
+</script>
+
+</body>
+</html>

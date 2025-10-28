@@ -1,0 +1,6070 @@
+{
+  "total_persons": 177,
+  "target_info": {
+    "time": "2025-10-28 11:01",
+    "amount": 100000.0,
+    "location": "定海"
+  },
+  "scored_persons": [
+    {
+      "name": "吴维萍 13575619751",
+      "account": "****5828",
+      "id_number": "330902198809115828",
+      "withdraw_time": "2025-08-27 09:07:24",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 135.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 50.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 50.0
+      }
+    },
+    {
+      "name": "15381362907",
+      "account": "****2524",
+      "id_number": "330901197306222524",
+      "withdraw_time": "2025-08-27 08:45:02",
+      "amount": 98039.5,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 135.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 50.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 50.0
+      }
+    },
+    {
+      "name": "15958069375",
+      "account": "****2621",
+      "id_number": "612430197908302621",
+      "withdraw_time": "2025-08-27 16:29:33",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13567665761",
+      "account": "****3121",
+      "id_number": "330902198710193121",
+      "withdraw_time": "2025-08-27 15:29:27",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13666710551",
+      "account": "****4920",
+      "id_number": "330902196111034920",
+      "withdraw_time": "2025-08-27 15:13:20",
+      "amount": 92000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 50.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 50.0
+      }
+    },
+    {
+      "name": "13646801521",
+      "account": "****1429",
+      "id_number": "330902198201041429",
+      "withdraw_time": "2025-08-27 15:08:49",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "王君红 13567684070",
+      "account": "****2925",
+      "id_number": "330902197804172925",
+      "withdraw_time": "2025-08-27 14:48:35",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "方素琴",
+      "account": "****0681",
+      "id_number": "330901196301240681",
+      "withdraw_time": "2025-08-27 14:20:43",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15268035750",
+      "account": "****5023",
+      "id_number": "330921198209055023",
+      "withdraw_time": "2025-08-27 13:32:42",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13454096989",
+      "account": "****7227",
+      "id_number": "330902198811177227",
+      "withdraw_time": "2025-08-27 13:22:19",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13575619751",
+      "account": "****5828",
+      "id_number": "330902198809115828",
+      "withdraw_time": "2025-08-27 12:13:18",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "金凡煜 15268033262",
+      "account": "****0045",
+      "id_number": "330921198801050045",
+      "withdraw_time": "2025-08-27 11:50:44",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13868229514",
+      "account": "****4467",
+      "id_number": "330902197309124467",
+      "withdraw_time": "2025-08-27 11:29:04",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "包友娟 13957238902",
+      "account": "****5529",
+      "id_number": "330902196603295529",
+      "withdraw_time": "2025-08-27 10:30:01",
+      "amount": 98505.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15268025426",
+      "account": "****1421",
+      "id_number": "330902199512061421",
+      "withdraw_time": "2025-08-27 10:28:42",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "严文琴 13732537533",
+      "account": "****2524",
+      "id_number": "330901197306222524",
+      "withdraw_time": "2025-08-27 10:02:17",
+      "amount": 98039.5,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "梁君红 13362426660",
+      "account": "****1825",
+      "id_number": "330903197310201825",
+      "withdraw_time": "2025-08-27 09:53:39",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13616802852",
+      "account": "****0063",
+      "id_number": "330921194301240063",
+      "withdraw_time": "2025-08-27 09:43:14",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "徐永华 13750711759",
+      "account": "****4922",
+      "id_number": "372826195803214922",
+      "withdraw_time": "2025-08-27 09:26:11",
+      "amount": 104600.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13967802230",
+      "account": "****0668",
+      "id_number": "330901192810030668",
+      "withdraw_time": "2025-08-27 09:20:28",
+      "amount": 101750.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "18358074991",
+      "account": "****822X",
+      "id_number": "33090219531221822X",
+      "withdraw_time": "2025-08-27 09:18:03",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "乐雪芬 13868229713",
+      "account": "****8728",
+      "id_number": "330902195802108728",
+      "withdraw_time": "2025-08-27 09:03:02",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "方瑞娣 13867218396",
+      "account": "****3320",
+      "id_number": "330903195512183320",
+      "withdraw_time": "2025-08-27 08:38:47",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "18768065725",
+      "account": "****0028",
+      "id_number": "330921196010120028",
+      "withdraw_time": "2025-08-27 08:18:30",
+      "amount": 99000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 130.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13567662370",
+      "account": "****552X",
+      "id_number": "33092219750106552X",
+      "withdraw_time": "2025-08-27 15:58:44",
+      "amount": 110000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 125.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "冯银翠 13666710551",
+      "account": "****4920",
+      "id_number": "330902196111034920",
+      "withdraw_time": "2025-08-27 15:21:11",
+      "amount": 92000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 125.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13750717046",
+      "account": "****6228",
+      "id_number": "330902196609016228",
+      "withdraw_time": "2025-08-27 15:07:32",
+      "amount": 90000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 125.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "戴瑜鲜 18857094969",
+      "account": "****0320",
+      "id_number": "330902200101270320",
+      "withdraw_time": "2025-08-27 14:20:43",
+      "amount": 109450.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 125.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13799901063",
+      "account": "****3029",
+      "id_number": "352225196711173029",
+      "withdraw_time": "2025-08-27 10:53:18",
+      "amount": 110000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 125.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13615802231",
+      "account": "****204X",
+      "id_number": "41042619760903204X",
+      "withdraw_time": "2025-08-27 10:10:44",
+      "amount": 90000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 125.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "夏赛红 15858093426",
+      "account": "****1043",
+      "id_number": "330902196709161043",
+      "withdraw_time": "2025-08-27 09:13:22",
+      "amount": 90800.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 125.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15858097193",
+      "account": "****4429",
+      "id_number": "330901197004084429",
+      "withdraw_time": "2025-08-27 08:56:01",
+      "amount": 90000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 125.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "俞海飞",
+      "account": "****3423",
+      "id_number": "330903197301043423",
+      "withdraw_time": "2025-08-27 14:52:11",
+      "amount": 80000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 120.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "18041154305",
+      "account": "****1230",
+      "id_number": "210881199001281230",
+      "withdraw_time": "2025-08-27 14:10:48",
+      "amount": 98500.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 120.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 35.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 35.0
+      }
+    },
+    {
+      "name": "李青 13967200022",
+      "account": "****8716",
+      "id_number": "330902196812178716",
+      "withdraw_time": "2025-08-27 13:26:12",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 120.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 35.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 35.0
+      }
+    },
+    {
+      "name": "李芬萍 15088892397",
+      "account": "****2923",
+      "id_number": "330901196505312923",
+      "withdraw_time": "2025-08-27 12:04:10",
+      "amount": 80495.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 120.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13867212859",
+      "account": "****4923",
+      "id_number": "330902197011044923",
+      "withdraw_time": "2025-08-27 09:17:54",
+      "amount": 80000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 120.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "张雅玉 13185802111",
+      "account": "****066X",
+      "id_number": "33090119520813066X",
+      "withdraw_time": "2025-08-27 08:43:36",
+      "amount": 80197.91,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 120.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "邬文清 13905804558",
+      "account": "****0327",
+      "id_number": "330901195410140327",
+      "withdraw_time": "2025-08-27 08:33:41",
+      "amount": 80312.5,
+      "location": "定海",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 120.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13587080470",
+      "account": "****1530",
+      "id_number": "330921197502021530",
+      "withdraw_time": "2025-08-27 16:21:21",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13615806953",
+      "account": "****1313",
+      "id_number": "341224198502261313",
+      "withdraw_time": "2025-08-27 16:05:11",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15239076707",
+      "account": "****3312",
+      "id_number": "412828200001253312",
+      "withdraw_time": "2025-08-27 15:08:34",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13957200787",
+      "account": "****8711",
+      "id_number": "330902197103308711",
+      "withdraw_time": "2025-08-27 15:08:27",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13735032082",
+      "account": "****2218",
+      "id_number": "330901197110282218",
+      "withdraw_time": "2025-08-27 15:05:33",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13082873425",
+      "account": "****6710",
+      "id_number": "330902195903156710",
+      "withdraw_time": "2025-08-27 14:51:21",
+      "amount": 105000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15205961122",
+      "account": "****0315",
+      "id_number": "350321198111090315",
+      "withdraw_time": "2025-08-27 14:31:13",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13575612953",
+      "account": "****5218",
+      "id_number": "330902195405145218",
+      "withdraw_time": "2025-08-27 14:13:19",
+      "amount": 101650.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13819885571",
+      "account": "****2352",
+      "id_number": "341225198008212352",
+      "withdraw_time": "2025-08-27 13:44:39",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "18857061029",
+      "account": "****0015",
+      "id_number": "330902199012170015",
+      "withdraw_time": "2025-08-27 13:37:32",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "李青 13906807027",
+      "account": "****8716",
+      "id_number": "330902196812178716",
+      "withdraw_time": "2025-08-27 13:37:18",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "陈基忠 13705809295",
+      "account": "****0316",
+      "id_number": "330901194910230316",
+      "withdraw_time": "2025-08-27 12:24:43",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "周志训 15958056163",
+      "account": "****121X",
+      "id_number": "33090219651009121X",
+      "withdraw_time": "2025-08-27 11:55:53",
+      "amount": 95000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "田浩军 13216928776",
+      "account": "****171X",
+      "id_number": "34120220060406171X",
+      "withdraw_time": "2025-08-27 11:54:47",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "杨仙炳 18905806226",
+      "account": "****2515",
+      "id_number": "331002198507302515",
+      "withdraw_time": "2025-08-27 11:33:11",
+      "amount": 93000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 35.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 35.0
+      }
+    },
+    {
+      "name": "13967214346",
+      "account": "****0970",
+      "id_number": "330903198810200970",
+      "withdraw_time": "2025-08-27 10:15:43",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13575634397",
+      "account": "****2812",
+      "id_number": "330725197502142812",
+      "withdraw_time": "2025-08-27 10:01:34",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13857220819",
+      "account": "****3818",
+      "id_number": "330902197210293818",
+      "withdraw_time": "2025-08-27 09:48:58",
+      "amount": 100000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "方世明 15268005706",
+      "account": "****6939",
+      "id_number": "330902196211246939",
+      "withdraw_time": "2025-08-27 09:19:13",
+      "amount": 100800.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "刘军朝 13957213836",
+      "account": "****2910",
+      "id_number": "330902197001032910",
+      "withdraw_time": "2025-08-27 09:06:50",
+      "amount": 101600.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 115.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 40,
+          "total_base_score": 85
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 85,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13575627333",
+      "account": "****4431",
+      "id_number": "330902198203184431",
+      "withdraw_time": "2025-08-27 15:29:39",
+      "amount": 92000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 110.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "张加法",
+      "account": "****1416",
+      "id_number": "330901195912021416",
+      "withdraw_time": "2025-08-27 14:30:53",
+      "amount": 88525.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 110.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 35.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 35.0
+      }
+    },
+    {
+      "name": "苏小东",
+      "account": "****6038",
+      "id_number": "330921198804116038",
+      "withdraw_time": "2025-08-27 10:42:37",
+      "amount": 92000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 110.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 40,
+          "total_base_score": 80
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 80,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13059835365",
+      "account": "****2050",
+      "id_number": "412825197608162050",
+      "withdraw_time": "2025-08-27 09:01:04",
+      "amount": 80000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 110.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 35.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 35.0
+      }
+    },
+    {
+      "name": "13385760048",
+      "account": "****0013",
+      "id_number": "330921199904140013",
+      "withdraw_time": "2025-08-27 16:28:53",
+      "amount": 80000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 105.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15157983532",
+      "account": "****3816",
+      "id_number": "330902199506023816",
+      "withdraw_time": "2025-08-27 16:10:45",
+      "amount": 80000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 105.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "张加法",
+      "account": "****1416",
+      "id_number": "330901195912021416",
+      "withdraw_time": "2025-08-27 15:03:44",
+      "amount": 88525.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 105.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13957230372",
+      "account": "****2510",
+      "id_number": "330922198108042510",
+      "withdraw_time": "2025-08-27 11:16:02",
+      "amount": 80000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 105.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13515808105",
+      "account": "****7410",
+      "id_number": "330902196408137410",
+      "withdraw_time": "2025-08-27 10:18:03",
+      "amount": 80000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 105.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13506609628",
+      "account": "****0712",
+      "id_number": "330901196901040712",
+      "withdraw_time": "2025-08-27 09:30:43",
+      "amount": 80000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 105.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "吕春峰 13059835365",
+      "account": "****2050",
+      "id_number": "412825197608162050",
+      "withdraw_time": "2025-08-27 09:01:12",
+      "amount": 80000.0,
+      "location": "定海",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 105.0,
+      "match_level": "非常高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 40,
+          "total_base_score": 75
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 75,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13567684070",
+      "account": "****2925",
+      "id_number": "330902197804172925",
+      "withdraw_time": "2025-08-27 15:08:11",
+      "amount": 100000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 95.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 50.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 50.0
+      }
+    },
+    {
+      "name": "13362404823",
+      "account": "****3622",
+      "id_number": "330903198104223622",
+      "withdraw_time": "2025-08-27 14:45:18",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 95.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 50.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 50.0
+      }
+    },
+    {
+      "name": "13575621863",
+      "account": "****194X",
+      "id_number": "33090219570227194X",
+      "withdraw_time": "2025-08-27 10:20:49",
+      "amount": 100045.76,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 95.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 50.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 50.0
+      }
+    },
+    {
+      "name": "13750714416",
+      "account": "****1021",
+      "id_number": "330921198909011021",
+      "withdraw_time": "2025-08-27 09:50:09",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 95.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 50.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 50.0
+      }
+    },
+    {
+      "name": "朱娜 13587092832",
+      "account": "****0020",
+      "id_number": "330922198106260020",
+      "withdraw_time": "2025-08-27 16:19:34",
+      "amount": 101650.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13758040438",
+      "account": "****5524",
+      "id_number": "330921197006295524",
+      "withdraw_time": "2025-08-27 16:13:26",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "林波娜",
+      "account": "****252X",
+      "id_number": "33092219761231252X",
+      "withdraw_time": "2025-08-27 15:52:32",
+      "amount": 100000.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13646500665",
+      "account": "****2329",
+      "id_number": "330902195912142329",
+      "withdraw_time": "2025-08-27 15:22:22",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "马秋红 13735013224",
+      "account": "****4727",
+      "id_number": "330903197511014727",
+      "withdraw_time": "2025-08-27 15:18:36",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15924019026",
+      "account": "****5523",
+      "id_number": "330921197403115523",
+      "withdraw_time": "2025-08-27 15:18:08",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15460540214",
+      "account": "****0023",
+      "id_number": "330902194907290023",
+      "withdraw_time": "2025-08-27 15:16:25",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "俞娜 13735009364",
+      "account": "****3622",
+      "id_number": "330903198104223622",
+      "withdraw_time": "2025-08-27 15:11:11",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "乐海亚",
+      "account": "****4544",
+      "id_number": "330903196610154544",
+      "withdraw_time": "2025-08-27 14:59:58",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "18458901350",
+      "account": "****1085",
+      "id_number": "430181198711091085",
+      "withdraw_time": "2025-08-27 14:27:29",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15381358511",
+      "account": "****2826",
+      "id_number": "330903196303222826",
+      "withdraw_time": "2025-08-27 14:00:54",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13506804749",
+      "account": "****242X",
+      "id_number": "33090319831114242X",
+      "withdraw_time": "2025-08-27 12:41:22",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15958061420",
+      "account": "****6921",
+      "id_number": "341281196912206921",
+      "withdraw_time": "2025-08-27 11:30:44",
+      "amount": 100000.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13857211060",
+      "account": "****302X",
+      "id_number": "33092119661020302X",
+      "withdraw_time": "2025-08-27 10:37:45",
+      "amount": 100000.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "黄雪群",
+      "account": "****3527",
+      "id_number": "330921197204233527",
+      "withdraw_time": "2025-08-27 10:29:55",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13587060546",
+      "account": "****3723",
+      "id_number": "330903197706263723",
+      "withdraw_time": "2025-08-27 10:29:38",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13750714416",
+      "account": "****1021",
+      "id_number": "330921198909011021",
+      "withdraw_time": "2025-08-27 10:12:11",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13567685312",
+      "account": "****0629",
+      "id_number": "330903196503170629",
+      "withdraw_time": "2025-08-27 10:10:03",
+      "amount": 104142.03,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "王晓音 13750724222",
+      "account": "****194X",
+      "id_number": "33090219570227194X",
+      "withdraw_time": "2025-08-27 10:00:27",
+      "amount": 100045.76,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13868206263",
+      "account": "****0225",
+      "id_number": "330903198911220225",
+      "withdraw_time": "2025-08-27 09:53:13",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "黄优飞 13656820524",
+      "account": "****8729",
+      "id_number": "330902197010298729",
+      "withdraw_time": "2025-08-27 09:53:10",
+      "amount": 101600.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "叶芬芬 13666585872",
+      "account": "****4522",
+      "id_number": "330922197110284522",
+      "withdraw_time": "2025-08-27 09:40:52",
+      "amount": 101706.5,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "陆志芬 13646501612",
+      "account": "****0024",
+      "id_number": "830000196602210024",
+      "withdraw_time": "2025-08-27 09:26:01",
+      "amount": 100070.42,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13957220603",
+      "account": "****0321",
+      "id_number": "330902197112190321",
+      "withdraw_time": "2025-08-27 09:20:55",
+      "amount": 100000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "徐雅珠",
+      "account": "****0668",
+      "id_number": "330901196010110668",
+      "withdraw_time": "2025-08-27 09:20:30",
+      "amount": 103000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15924001856",
+      "account": "****4021",
+      "id_number": "330922198111274021",
+      "withdraw_time": "2025-08-27 09:15:14",
+      "amount": 100000.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15858078979",
+      "account": "****7547",
+      "id_number": "342622197801097547",
+      "withdraw_time": "2025-08-27 09:12:54",
+      "amount": 100000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13732529907",
+      "account": "****2409",
+      "id_number": "412929197503062409",
+      "withdraw_time": "2025-08-27 09:05:50",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "张朔君 18358094088",
+      "account": "****0220",
+      "id_number": "330903196603090220",
+      "withdraw_time": "2025-08-27 09:02:24",
+      "amount": 102112.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "张养利 13402069254",
+      "account": "****2021",
+      "id_number": "330921195611252021",
+      "withdraw_time": "2025-08-27 08:48:13",
+      "amount": 102000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "金女 13868221319",
+      "account": "****1027",
+      "id_number": "330922197805161027",
+      "withdraw_time": "2025-08-27 08:46:54",
+      "amount": 100000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13967225011",
+      "account": "****2522",
+      "id_number": "330903196702102522",
+      "withdraw_time": "2025-08-27 08:39:21",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "胡雪娣 13587053926",
+      "account": "****0328",
+      "id_number": "330901196203200328",
+      "withdraw_time": "2025-08-27 08:37:00",
+      "amount": 100018.75,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13857201261",
+      "account": "****3421",
+      "id_number": "330903196606243421",
+      "withdraw_time": "2025-08-27 08:31:09",
+      "amount": 100000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "王梅娣 18358081341",
+      "account": "****0022",
+      "id_number": "330921194402110022",
+      "withdraw_time": "2025-08-27 08:29:39",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13665810015",
+      "account": "****0024",
+      "id_number": "330922195706230024",
+      "withdraw_time": "2025-08-27 08:05:28",
+      "amount": 98350.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 90.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "岑蕾 15606617883",
+      "account": "****4282",
+      "id_number": "330282199107174282",
+      "withdraw_time": "2025-08-27 16:15:20",
+      "amount": 92421.99,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13957466301",
+      "account": "****4429",
+      "id_number": "522723198508024429",
+      "withdraw_time": "2025-08-27 15:43:01",
+      "amount": 91900.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15858060038",
+      "account": "****002X",
+      "id_number": "33090319730315002X",
+      "withdraw_time": "2025-08-27 15:26:12",
+      "amount": 90000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15858097596",
+      "account": "****3020",
+      "id_number": "330921195502183020",
+      "withdraw_time": "2025-08-27 14:57:10",
+      "amount": 105757.07,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "邬维静 18768085998",
+      "account": "****1022",
+      "id_number": "310114197903061022",
+      "withdraw_time": "2025-08-27 14:23:57",
+      "amount": 90077.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13567669975",
+      "account": "****3022",
+      "id_number": "330921197002163022",
+      "withdraw_time": "2025-08-27 11:10:36",
+      "amount": 90000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13867215617",
+      "account": "****0683",
+      "id_number": "330902195607100683",
+      "withdraw_time": "2025-08-27 09:17:59",
+      "amount": 93452.47,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "王友娣",
+      "account": "****254X",
+      "id_number": "33092119461204254X",
+      "withdraw_time": "2025-08-27 09:09:48",
+      "amount": 109450.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13515809225",
+      "account": "****4766",
+      "id_number": "330903198010284766",
+      "withdraw_time": "2025-08-27 08:35:53",
+      "amount": 90000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13567693628",
+      "account": "****3624",
+      "id_number": "330903197610113624",
+      "withdraw_time": "2025-08-27 08:07:56",
+      "amount": 90000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 85.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13646506502",
+      "account": "****0949",
+      "id_number": "330903199010150949",
+      "withdraw_time": "2025-08-27 14:28:12",
+      "amount": 80000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13867220114",
+      "account": "****0023",
+      "id_number": "330921197905040023",
+      "withdraw_time": "2025-08-27 12:38:47",
+      "amount": 80000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "范美燕 13867213622",
+      "account": "****0021",
+      "id_number": "330921197410120021",
+      "withdraw_time": "2025-08-27 11:47:07",
+      "amount": 80000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13750724045",
+      "account": "****4225",
+      "id_number": "330903197805274225",
+      "withdraw_time": "2025-08-27 10:47:39",
+      "amount": 85000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13575619575",
+      "account": "****7525",
+      "id_number": "330921197301247525",
+      "withdraw_time": "2025-08-27 10:07:37",
+      "amount": 81300.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "18967230267",
+      "account": "****5922",
+      "id_number": "330903197603235922",
+      "withdraw_time": "2025-08-27 09:16:04",
+      "amount": 81000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13706802515",
+      "account": "****2523",
+      "id_number": "330903197512312523",
+      "withdraw_time": "2025-08-27 09:06:37",
+      "amount": 80000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "13575603737",
+      "account": "****0932",
+      "id_number": "330902196007100932",
+      "withdraw_time": "2025-08-27 08:47:19",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 35.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 35.0
+      }
+    },
+    {
+      "name": "18906805291",
+      "account": "****3745",
+      "id_number": "330903196904083745",
+      "withdraw_time": "2025-08-27 08:42:10",
+      "amount": 80000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "15168057566",
+      "account": "****1825",
+      "id_number": "330902195603241825",
+      "withdraw_time": "2025-08-27 08:05:11",
+      "amount": 82240.48000000001,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "female",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 80.0,
+      "match_level": "高",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 15.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 45.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 45.0
+      }
+    },
+    {
+      "name": "梅吉山 0",
+      "account": "****3918",
+      "id_number": "332625196710063918",
+      "withdraw_time": "2025-08-27 16:05:43",
+      "amount": 100000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15387532798",
+      "account": "****3272",
+      "id_number": "430124198006173272",
+      "withdraw_time": "2025-08-27 16:05:38",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15395741730",
+      "account": "****0376",
+      "id_number": "620523198809190376",
+      "withdraw_time": "2025-08-27 15:40:33",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13758025166",
+      "account": "****0618",
+      "id_number": "330903197601150618",
+      "withdraw_time": "2025-08-27 15:37:35",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "胡舟芳 13868212577",
+      "account": "****2516",
+      "id_number": "330903198205182516",
+      "withdraw_time": "2025-08-27 15:29:05",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "王华锋 13575636346",
+      "account": "****2515",
+      "id_number": "330921197607222515",
+      "withdraw_time": "2025-08-27 15:15:44",
+      "amount": 105000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13905806689",
+      "account": "****5217",
+      "id_number": "330903197902285217",
+      "withdraw_time": "2025-08-27 15:11:26",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13587053312",
+      "account": "****4113",
+      "id_number": "330903197405044113",
+      "withdraw_time": "2025-08-27 15:04:36",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "江志军 13957238788",
+      "account": "****3916",
+      "id_number": "330903196412223916",
+      "withdraw_time": "2025-08-27 14:41:53",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "韩德邦 18041154305",
+      "account": "****1230",
+      "id_number": "210881199001281230",
+      "withdraw_time": "2025-08-27 14:30:24",
+      "amount": 98500.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15958074403",
+      "account": "****4730",
+      "id_number": "330903196105024730",
+      "withdraw_time": "2025-08-27 14:20:26",
+      "amount": 102050.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "夏建光 13646806798",
+      "account": "****6719",
+      "id_number": "330902198001126719",
+      "withdraw_time": "2025-08-27 13:56:22",
+      "amount": 100000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "胡光",
+      "account": "****2916",
+      "id_number": "330903197812122916",
+      "withdraw_time": "2025-08-27 13:18:10",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13957227321",
+      "account": "****7192",
+      "id_number": "330382198207107192",
+      "withdraw_time": "2025-08-27 12:39:58",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13506801512",
+      "account": "****2211",
+      "id_number": "330901195601162211",
+      "withdraw_time": "2025-08-27 10:28:59",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "何楠龄 15958068457",
+      "account": "****0013",
+      "id_number": "330921194401210013",
+      "withdraw_time": "2025-08-27 10:10:17",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13857212968",
+      "account": "****801X",
+      "id_number": "33092119600702801X",
+      "withdraw_time": "2025-08-27 10:08:44",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13868206544",
+      "account": "****5537",
+      "id_number": "330922198411105537",
+      "withdraw_time": "2025-08-27 09:59:19",
+      "amount": 100000.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15957089214",
+      "account": "****4719",
+      "id_number": "330903195304054719",
+      "withdraw_time": "2025-08-27 09:15:05",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13515803558",
+      "account": "****0211",
+      "id_number": "330902195411160211",
+      "withdraw_time": "2025-08-27 09:12:12",
+      "amount": 100000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13575603737",
+      "account": "****0932",
+      "id_number": "330902196007100932",
+      "withdraw_time": "2025-08-27 09:02:08",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13750717780",
+      "account": "****001X",
+      "id_number": "33092219541029001X",
+      "withdraw_time": "2025-08-27 08:55:55",
+      "amount": 100000.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13957237968",
+      "account": "****0517",
+      "id_number": "330922198211280517",
+      "withdraw_time": "2025-08-27 08:48:48",
+      "amount": 100000.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15372750179",
+      "account": "****2510",
+      "id_number": "330901197002032510",
+      "withdraw_time": "2025-08-27 08:42:49",
+      "amount": 100000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13665801641",
+      "account": "****1216",
+      "id_number": "330902195102251216",
+      "withdraw_time": "2025-08-27 08:40:07",
+      "amount": 100000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13567663460",
+      "account": "****6519",
+      "id_number": "330921196005056519",
+      "withdraw_time": "2025-08-27 08:33:29",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "张存军 13758012978",
+      "account": "****6012",
+      "id_number": "330921197510136012",
+      "withdraw_time": "2025-08-27 08:18:53",
+      "amount": 100000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13735001000",
+      "account": "****2513",
+      "id_number": "330902195901232513",
+      "withdraw_time": "2025-08-27 08:07:26",
+      "amount": 101650.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 75.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 40,
+          "location_score": 0,
+          "total_base_score": 45
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 45,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13587081325",
+      "account": "****0619",
+      "id_number": "330903196708240619",
+      "withdraw_time": "2025-08-27 15:53:46",
+      "amount": 90000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "18358068875",
+      "account": "****4211",
+      "id_number": "330903197305024211",
+      "withdraw_time": "2025-08-27 15:52:34",
+      "amount": 110000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15127091386",
+      "account": "****8515",
+      "id_number": "330323197203148515",
+      "withdraw_time": "2025-08-27 15:43:57",
+      "amount": 92000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "杨仙炳 13388440171",
+      "account": "****2515",
+      "id_number": "331002198507302515",
+      "withdraw_time": "2025-08-27 11:44:14",
+      "amount": 93000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "18069296220",
+      "account": "****4018",
+      "id_number": "330922198710304018",
+      "withdraw_time": "2025-08-27 11:33:41",
+      "amount": 92250.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13905803123",
+      "account": "****4918",
+      "id_number": "330903196410014918",
+      "withdraw_time": "2025-08-27 11:24:49",
+      "amount": 90000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13735015512",
+      "account": "****0635",
+      "id_number": "330903198806290635",
+      "withdraw_time": "2025-08-27 11:19:42",
+      "amount": 110000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "邵国爱",
+      "account": "****4710",
+      "id_number": "330903196311114710",
+      "withdraw_time": "2025-08-27 08:47:05",
+      "amount": 92000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13587082592",
+      "account": "****221X",
+      "id_number": "33090119550408221X",
+      "withdraw_time": "2025-08-27 08:44:56",
+      "amount": 91845.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "李必成",
+      "account": "****4119",
+      "id_number": "330903196402134119",
+      "withdraw_time": "2025-08-27 08:43:06",
+      "amount": 80000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 5,
+          "total_additional_score": 35.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 35.0
+      }
+    },
+    {
+      "name": "15372765382",
+      "account": "****0610",
+      "id_number": "330902195401290610",
+      "withdraw_time": "2025-08-27 08:22:55",
+      "amount": 90000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13706800791",
+      "account": "****4319",
+      "id_number": "330326195610304319",
+      "withdraw_time": "2025-08-27 08:21:32",
+      "amount": 108000.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 70.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 35,
+          "location_score": 0,
+          "total_base_score": 40
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 40,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13868228277",
+      "account": "****5516",
+      "id_number": "330921197202085516",
+      "withdraw_time": "2025-08-27 15:38:11",
+      "amount": 80000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 65.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "18840716376",
+      "account": "****0019",
+      "id_number": "210821196302040019",
+      "withdraw_time": "2025-08-27 13:57:40",
+      "amount": 80000.0,
+      "location": "其他",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 65.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "刘旭峰",
+      "account": "****4719",
+      "id_number": "330903197805194719",
+      "withdraw_time": "2025-08-27 10:12:29",
+      "amount": 80000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 65.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13575636161",
+      "account": "****2518",
+      "id_number": "330921196411042518",
+      "withdraw_time": "2025-08-27 09:55:16",
+      "amount": 80000.0,
+      "location": "岱山",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 65.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "徐明良 13967230289",
+      "account": "****1511",
+      "id_number": "330922195912071511",
+      "withdraw_time": "2025-08-27 08:59:43",
+      "amount": 81280.0,
+      "location": "嵊泗",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 65.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "15858050586",
+      "account": "****4119",
+      "id_number": "330903196402134119",
+      "withdraw_time": "2025-08-27 08:55:39",
+      "amount": 80000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 65.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 30.0
+      }
+    },
+    {
+      "name": "13587081765",
+      "account": "****0810",
+      "id_number": "342222196906130810",
+      "withdraw_time": "2025-08-27 08:19:45",
+      "amount": 80000.0,
+      "location": "普陀",
+      "status": "成功",
+      "gender": "male",
+      "has_adult_app": true,
+      "has_special_comm": true,
+      "has_history_warning": true,
+      "has_investment_app": false,
+      "score": 65.0,
+      "match_level": "中",
+      "amount_category": "high",
+      "score_details": {
+        "base_scores": {
+          "time_score": 5,
+          "amount_score": 30,
+          "location_score": 0,
+          "total_base_score": 35
+        },
+        "additional_scores": {
+          "gender_score": 0.0,
+          "app_score": 20.0,
+          "history_warning_score": 10,
+          "frequency_score": 0.0,
+          "total_additional_score": 30.0
+        },
+        "total_base_score": 35,
+        "total_additional_score": 30.0
+      }
+    }
+  ],
+  "top_match": {
+    "name": "吴维萍 13575619751",
+    "account": "****5828",
+    "id_number": "330902198809115828",
+    "withdraw_time": "2025-08-27 09:07:24",
+    "amount": 100000.0,
+    "location": "定海",
+    "status": "成功",
+    "gender": "female",
+    "has_adult_app": true,
+    "has_special_comm": true,
+    "has_history_warning": true,
+    "has_investment_app": false,
+    "score": 135.0,
+    "match_level": "非常高",
+    "amount_category": "high",
+    "score_details": {
+      "base_scores": {
+        "time_score": 5,
+        "amount_score": 40,
+        "location_score": 40,
+        "total_base_score": 85
+      },
+      "additional_scores": {
+        "gender_score": 15.0,
+        "app_score": 20.0,
+        "history_warning_score": 10,
+        "frequency_score": 5,
+        "total_additional_score": 50.0
+      },
+      "total_base_score": 85,
+      "total_additional_score": 50.0
+    }
+  },
+  "amount_category": "high",
+  "scoring_method": "分层评分系统",
+  "data_source": {
+    "type": "uploaded_file",
+    "file_name": "xlsx.xlsx",
+    "file_path": "D:\\codedown\\LLM_Withdraw Cash\\uploads\\xlsx.xlsx",
+    "processed_count": 177
+  }
+}
