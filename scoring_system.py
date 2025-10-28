@@ -25,8 +25,8 @@ class WithdrawScoringSystem:
         
         # 基础分权重配置
         self.base_score_config = {
-            'time_weight': 40,      # 时间匹配 40分
-            'amount_weight': 40,    # 金额匹配 40分
+            'time_weight': 30,      # 时间匹配 40分
+            'amount_weight': 20,    # 金额匹配 40分
             'location_weight': 40   # 地址匹配 40分
         }
         
@@ -36,19 +36,22 @@ class WithdrawScoringSystem:
                 'male': 15,           # 男性加分
                 'adult_app': 20,      # 涉黄类APP加分
                 'history_warning': 10, # 历史预警加分
+                'age_score': 20,      # 年龄加分（18-30岁）
             },
             'medium_amount': {  # 3万到10万
                 'male': 5,
                 'female': 5,
                 'adult_app': 10,
                 'history_warning': 15,
-                'special_app': 10
+                'special_app': 10,
+                'age_score': 20,      # 年龄加分（25-40岁）
             },
             'high_amount': {  # 10万以上
-                'female': 15,         # 女性加分
+                'female': 10,         # 女性加分
                 'special_comm': 20,   # 小众通联加分
-                'investment_app': 15,    # 投资类APP加分
-                'history_warning': 10,  # 历史预警加分
+                'investment_app': 20,    # 投资类APP加分
+                'history_warning': 20,  # 历史预警加分
+                'age_score': 30,      # 年龄加分（35岁以上）
             }
         }
         
@@ -105,9 +108,9 @@ class WithdrawScoringSystem:
         person_time = person_data.get('withdraw_time')
         if isinstance(person_time, datetime):
             time_diff_hours = abs((target_time - person_time).total_seconds()) / 3600
-            if time_diff_hours <= 1:
+            if time_diff_hours <= 0.5:
                 base_scores['time_score'] = 40
-            elif time_diff_hours <= 3:
+            elif time_diff_hours <= 2:
                 base_scores['time_score'] = 35
             elif time_diff_hours <= 6:
                 base_scores['time_score'] = 30
@@ -189,6 +192,8 @@ class WithdrawScoringSystem:
             'app_score': 0.0,
             'history_warning_score': 0.0,
             'frequency_score': 0.0,  # 交易频次加分
+            'warning_count_score': 0.0,  # 预警次数加分
+            'age_score': 0.0,  # 年龄加分
             'total_additional_score': 0.0
         }
         
@@ -197,6 +202,7 @@ class WithdrawScoringSystem:
         
         # 获取人员特征
         gender = person_data.get('gender', 'unknown')
+        age = person_data.get('age', None)
         has_adult_app = person_data.get('has_adult_app', False)
         has_special_comm = person_data.get('has_special_comm', False)
         has_history_warning = person_data.get('has_history_warning', False)
@@ -210,6 +216,10 @@ class WithdrawScoringSystem:
             # 涉黄类APP加分
             if has_adult_app:
                 additional_scores['app_score'] += config['adult_app']
+            
+            # 年龄加分：18-30岁
+            if age is not None and 18 <= age <= 30:
+                additional_scores['age_score'] += config['age_score']
                 
         elif amount_category == 'medium':  # 3万到10万
             # 性别加分（男女都有少量加分）
@@ -225,6 +235,10 @@ class WithdrawScoringSystem:
             # 特殊APP加分
             if has_special_comm:
                 additional_scores['app_score'] += config['special_app']
+            
+            # 年龄加分：25-40岁
+            if age is not None and 25 <= age <= 40:
+                additional_scores['age_score'] += config['age_score']
                 
         else:  # 10万以上
             # 女性加分
@@ -238,6 +252,10 @@ class WithdrawScoringSystem:
             # 投资类APP加分
             if person_data.get('has_investment_app', False):
                 additional_scores['app_score'] += config['investment_app']
+            
+            # 年龄加分：35岁以上
+            if age is not None and age >= 35:
+                additional_scores['age_score'] += config['age_score']
         
         # 历史预警加分（所有区间通用）
         if has_history_warning:
@@ -249,12 +267,29 @@ class WithdrawScoringSystem:
             # 交易频次两次及以上的，每多一次+5分
             additional_scores['frequency_score'] = (transaction_count - 1) * 5
         
+        # 预警次数加分（所有区间通用）
+        warning_count = person_data.get('预警次数', 0)  # 预警次数
+        if warning_count == 0:
+            additional_scores['warning_count_score'] = 0
+        elif warning_count == 1:
+            additional_scores['warning_count_score'] = 5
+        elif warning_count == 2:
+            additional_scores['warning_count_score'] = 10
+        elif warning_count == 3:
+            additional_scores['warning_count_score'] = 30
+        elif warning_count == 4:
+            additional_scores['warning_count_score'] = 26
+        else:  # 5次及以上
+            additional_scores['warning_count_score'] = 30
+        
         # 计算附加分总分
         additional_scores['total_additional_score'] = (
             additional_scores['gender_score'] + 
             additional_scores['app_score'] + 
             additional_scores['history_warning_score'] +
-            additional_scores['frequency_score']
+            additional_scores['frequency_score'] +
+            additional_scores['warning_count_score'] +
+            additional_scores['age_score']  # 年龄加分
         )
         
         return additional_scores
@@ -306,10 +341,13 @@ class WithdrawScoringSystem:
                 'location': person_data.get('location', ''),
                 'status': person_data.get('status', ''),
                 'gender': person_data.get('gender', 'unknown'),
+                'age': person_data.get('age', None),  # 年龄字段
                 'has_adult_app': person_data.get('has_adult_app', False),
                 'has_special_comm': person_data.get('has_special_comm', False),
                 'has_history_warning': person_data.get('has_history_warning', False),
                 'has_investment_app': person_data.get('has_investment_app', False),
+                'warning_count': person_data.get('预警次数', 0),  # 预警次数
+                '疑似诈骗类型': person_data.get('疑似诈骗类型', ''),  # 疑似诈骗类型
                 'score': round(total_score, 1),
                 'match_level': match_level,
                 'amount_category': amount_category,

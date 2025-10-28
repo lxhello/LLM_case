@@ -1241,13 +1241,10 @@
             if (date && time) {
                 const selectedDate = new Date(date + 'T' + time);
                 const now = new Date();
-                const oneMonthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+                // 只保留未来日期的限制，移除过去日期的限制
                 const oneDayLater = new Date(now.getTime() + 24 * 60 * 60 * 1000);
                 
-                if (selectedDate < oneMonthAgo) {
-                    confirmBtn.disabled = true;
-                    confirmBtn.textContent = '日期过早';
-                } else if (selectedDate > oneDayLater) {
+                if (selectedDate > oneDayLater) {
                     confirmBtn.disabled = true;
                     confirmBtn.textContent = '日期过晚';
                 } else {

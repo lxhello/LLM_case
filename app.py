@@ -100,6 +100,27 @@ def create_app() -> Flask:
 							scoring_system.export_analysis_result(scoring_result, str(result_path))
 					except Exception as e:
 						app.logger.warning(f"文件处理失败: {str(e)}，仅保存文件")
+		
+		# 检查是否需要合并预警数据
+		warning_file = UPLOAD_DIR / "预警查询列表导出.xlsx"
+		withdraw_file = UPLOAD_DIR / "取现记录导出.xlsx"
+		
+		if warning_file.exists() and withdraw_file.exists():
+			try:
+				app.logger.info("检测到预警查询列表和取现记录文件，开始自动合并...")
+				# 合并后直接覆盖原始文件
+				merged_df = data_processor.merge_warning_count_to_withdraw_records(
+					str(warning_file),
+					str(withdraw_file),
+					str(withdraw_file)  # 输出到原文件，替换旧数据
+				)
+				
+				app.logger.info(f"自动合并完成，已替换文件: {withdraw_file}")
+				flash(f"已自动合并预警数据并替换文件：共{len(merged_df)}条记录，其中{(merged_df['预警次数'] > 0).sum()}条有预警", "info")
+				
+			except Exception as e:
+				app.logger.error(f"自动合并失败: {str(e)}")
+				flash(f"自动合并失败: {str(e)}", "error")
 
 		# Log and flash message
 		if saved_files:
@@ -150,15 +171,22 @@ def create_app() -> Flask:
 			return jsonify({"success": False, "error": "金额格式不正确"}), 400
 		
 		try:
-			# 查找最新上传的文件
-			latest_file = _get_latest_uploaded_file()
+			# 优先查找合并后的文件
+			latest_file = _get_latest_merged_file() or _get_latest_uploaded_file()
 			
 			if not latest_file:
 				return jsonify({"success": False, "error": "未找到上传的数据文件，请先上传Excel或CSV文件"}), 400
 			
+			# 检查是否为合并后的文件（通过检查文件名和"预警次数"列）
+			is_merged_file = (latest_file.name == "取现记录导出.xlsx")
+			if is_merged_file:
+				app.logger.info(f"使用已合并的文件进行计算: {latest_file}")
+			else:
+				app.logger.info(f"使用普通上传文件进行计算: {latest_file}")
+			
 			try:
 				# 使用数据处理器处理上传文件
-				app.logger.info(f"正在处理上传文件: {latest_file}")
+				app.logger.info(f"正在处理文件: {latest_file}")
 				processed_data = data_processor.process_uploaded_data(str(latest_file))
 				
 				if not processed_data:
@@ -170,12 +198,12 @@ def create_app() -> Flask:
 				# 使用处理后的数据进行评分
 				scoring_result = scoring_system.score_persons(processed_data, target_time, target_amount, clue_location)
 				scoring_result["data_source"] = {
-					"type": "uploaded_file",
+					"type": "merged_file" if is_merged_file else "uploaded_file",
 					"file_name": latest_file.name,
 					"file_path": str(latest_file),
 					"processed_count": len(processed_data)
 				}
-				app.logger.info(f"成功处理上传文件，共{len(processed_data)}条数据")
+				app.logger.info(f"成功处理文件，共{len(processed_data)}条数据")
 				
 			except Exception as process_error:
 				# 文件处理失败
@@ -337,6 +365,29 @@ def _get_latest_uploaded_file():
 		return None
 	except Exception as e:
 		print(f"获取最新文件失败: {str(e)}")
+		return None
+
+def _get_latest_merged_file():
+	"""获取合并后的取现记录文件（已被预警数据合并）"""
+	try:
+		# 查找"取现记录导出.xlsx"文件
+		withdraw_file = UPLOAD_DIR / "取现记录导出.xlsx"
+		
+		if withdraw_file.exists() and withdraw_file.is_file():
+			# 检查文件中是否包含"预警次数"列（合并成功的标志）
+			try:
+				import pandas as pd
+				df = pd.read_excel(withdraw_file, nrows=1)
+				if '预警次数' in df.columns:
+					app.logger.info(f"找到已合并的文件: {withdraw_file}")
+					return withdraw_file
+			except Exception as e:
+				app.logger.error(f"检查合并文件失败: {str(e)}")
+		
+		app.logger.info("未找到已合并的文件")
+		return None
+	except Exception as e:
+		app.logger.error(f"获取最新合并文件失败: {str(e)}")
 		return None
 
 

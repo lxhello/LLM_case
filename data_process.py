@@ -32,10 +32,13 @@ class DataProcessor:
             'location': ['业务发生地网点名称', '网点名称', '发生地点', '地点'],
             'transaction_count': ['取现次数', '交易次数', '次数'],
             'gender': ['性别', '性别（0女 1男）'],
+            'age': ['年龄'],  # 年龄字段映射
             'has_history_warning': ['取现预警（0否 1是）', '预警', '取现预警'],
             'has_history_fraud': ['被骗历史', '被骗史', '诈骗历史'],
             'has_special_comm': ['小众聊天', '小众通联', '特殊聊天'],
-            'has_adult_app': ['涉黄软件', '涉黄APP', '成人软件']
+            'has_adult_app': ['涉黄软件', '涉黄APP', '成人软件'],
+            'warning_count': ['预警次数'],  # 合并后的预警次数字段
+            'fraud_type': ['疑似诈骗类型', '诈骗类型', '类型']  # 疑似诈骗类型字段
         }
         
         # 地点关键字映射
@@ -390,6 +393,28 @@ class DataProcessor:
                     else:
                         person_data['gender'] = 'unknown'
                     
+                    # 处理年龄字段
+                    if 'age' in column_map:
+                        age_value = row[column_map['age']]
+                        try:
+                            age_is_null = pd.isna(age_value)
+                            if isinstance(age_is_null, (bool, np.bool_)):
+                                is_null = age_is_null
+                            else:
+                                is_null = bool(age_is_null.any()) if hasattr(age_is_null, 'any') else True
+                        except:
+                            is_null = True
+                        
+                        if not is_null and str(age_value).strip() != '':
+                            try:
+                                person_data['age'] = int(float(age_value))
+                            except (ValueError, TypeError):
+                                person_data['age'] = None
+                        else:
+                            person_data['age'] = None
+                    else:
+                        person_data['age'] = None
+                    
                     # 处理交易次数
                     if 'transaction_count' in column_map:
                         count_value = row[column_map['transaction_count']]
@@ -463,6 +488,32 @@ class DataProcessor:
                                     # 如果转换失败，使用默认值
                                     if field != 'has_history_fraud':
                                         person_data[target_field] = False
+                    
+                    # 处理预警次数字段（从合并后的文件读取）
+                    if 'warning_count' in column_map:
+                        warning_count_value = row[column_map['warning_count']]
+                        try:
+                            if pd.isna(warning_count_value):
+                                person_data['预警次数'] = 0
+                            else:
+                                person_data['预警次数'] = int(float(warning_count_value))
+                        except (ValueError, TypeError):
+                            person_data['预警次数'] = 0
+                    else:
+                        person_data['预警次数'] = 0
+                    
+                    # 处理疑似诈骗类型字段（从合并后的文件读取）
+                    if 'fraud_type' in column_map:
+                        fraud_type_value = row[column_map['fraud_type']]
+                        try:
+                            if pd.isna(fraud_type_value):
+                                person_data['疑似诈骗类型'] = ''
+                            else:
+                                person_data['疑似诈骗类型'] = str(fraud_type_value).strip()
+                        except (ValueError, TypeError):
+                            person_data['疑似诈骗类型'] = ''
+                    else:
+                        person_data['疑似诈骗类型'] = ''
                     
                     processed_data.append(person_data)
                     
